@@ -93,7 +93,27 @@ class Complex {
 
   // String representation in rectangular form.
   toString() {
-    return `${this.real}+${this.imag}i`;
+    // Real.
+    if (this.imag === 0) {
+      return String(this.real);
+    }
+
+    let imaginary : string;
+    if (this.imag === 1) {
+      imaginary = 'i';
+    } else if (this.imag === -1) {
+      imaginary = '-i';
+    } else {
+      imaginary = `${this.imag}i`;
+    }
+
+    // Purely imaginary.
+    if (this.real === 0) {
+      return imaginary;
+    }
+
+    // Both the real and imaginary parts are nonzero.
+    return `${this.real}${this.imag > 0 ? '+' : ''}${imaginary}`;
   }
 }
 

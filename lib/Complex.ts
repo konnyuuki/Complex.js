@@ -1,5 +1,5 @@
 // A complex number class.
-export default class Complex {
+class Complex {
   // Real and imaginary parts.
   real: number;
   imag: number;
@@ -96,3 +96,8 @@ export default class Complex {
     return `${this.real}+${this.imag}i`;
   }
 }
+
+const I = new Complex(0, 1);
+
+export default Complex;
+export { Complex, I };

@@ -44,33 +44,33 @@ export default class Complex {
     return new Complex(this.real - that.real, this.imag - that.imag);
   }
 
-  // Multiplies two complex numbers in polar form.
-  // re^it se^iu = rs e^[i(t + u)].
+  // Multiplies two complex numbers.
+  // (a + bi)(c + di) = (ac - bd) + (ad + bc)i.
   mul(that: Complex) {
-    return Complex.fromPolar(this.abs() * that.abs(), this.arg() + that.arg());
+    return new Complex(
+      this.real * that.real - this.imag * that.imag,
+      this.real * that.imag + this.imag * that.real,
+    );
 
-    // This can also be written in rectangular form:
-    // (a + bi)(c + di) = (ac - bd) + (ad + bc)i.
+    // This can also be written in polar form:
+    // re^it se^iu = rs e^[i(t + u)].
 
-    // return new Complex(
-    //   this.real * that.real - this.imag * that.imag,
-    //   this.real * that.imag + this.imag * that.real,
-    // );
+    // return Complex.fromPolar(this.abs() * that.abs(), this.arg() + that.arg());
   }
 
-  // Divides two complex numbers in polar form.
-  // re^it/se^iu = r/s e^[i(t - u)].
+  // Divides two complex numbers.
+  // (a + bi)/(c + di) = [(ac + bd) + (bc - ad)i]/(c^2 + d^2).
   div(that: Complex) {
-    return Complex.fromPolar(this.abs() / that.abs(), this.arg() - that.arg());
+    const denominator = that.real ** 2 + that.imag ** 2;
+    return new Complex(
+      (this.real * that.real + this.imag * that.imag) / denominator,
+      (this.imag * that.real - this.real * that.imag) / denominator,
+    );
 
-    // This can also be written in rectangular form:
-    // (a + bi)/(c + di) = [(ac + bd) + (bc - ad)i]/(c^2 + d^2).
+    // This can also be written in polar form:
+    // re^it/se^iu = r/s e^[i(t - u)].
 
-    // const denominator = that.real ** 2 + that.imag ** 2;
-    // return new Complex(
-    //   (this.real * that.real + this.imag * that.imag) / denominator,
-    //   (this.imag * that.real - this.real * that.imag) / denominator,
-    // );
+    // return Complex.fromPolar(this.abs() / that.abs(), this.arg() - that.arg());
   }
 
   // Additive inverse.

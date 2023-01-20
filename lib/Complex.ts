@@ -86,7 +86,7 @@ export default class Complex {
   }
 
   // Equality of two complex numbers.
-  // (a + bi) = (c + di) iff a = c and b = d.
+  // a + bi = c + di iff a = c and b = d.
   equals(that: Complex) {
     return this.real === that.real && this.imag === that.imag;
   }

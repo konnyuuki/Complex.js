@@ -6,9 +6,13 @@ class Complex {
 
   // Creates a complex number in rectangular form (i.e., from real and imaginary
   // parts).
-  constructor(realPart: number, imaginaryPart: number) {
+  constructor(realPart: number = 0, imaginaryPart: number = 0) {
     this.real = realPart;
     this.imag = imaginaryPart;
+  }
+
+  clone() {
+    return new Complex(this.real, this.imag);
   }
 
   // Creates a complex number in polar form (i.e., from absolute value and
@@ -32,45 +36,73 @@ class Complex {
     return Math.atan2(this.imag, this.real);
   }
 
-  // Adds two complex numbers.
+  // Addition.
   // (a + bi) + (c + di) = (a + c) + (b + d)i.
-  add(that: Complex) {
-    return new Complex(this.real + that.real, this.imag + that.imag);
+  add(...operands: Complex[]) {
+    let result = this.clone();
+    for (let operand of operands) {
+      result.real += operand.real;
+      result.imag += operand.imag;
+    }
+    return result;
   }
 
-  // Subtracts two complex numbers.
+  // Subtraction.
   // (a + bi) - (c + di) = (a - c) + (b - d)i.
-  sub(that: Complex) {
-    return new Complex(this.real - that.real, this.imag - that.imag);
+  sub(...operands: Complex[]) {
+    let result = this.clone();
+    for (let operand of operands) {
+      result.real -= operand.real;
+      result.imag -= operand.imag;
+    }
+    return result;
   }
 
-  // Multiplies two complex numbers.
+  // Multiplication.
   // (a + bi)(c + di) = (ac - bd) + (ad + bc)i.
-  mul(that: Complex) {
-    return new Complex(
-      this.real * that.real - this.imag * that.imag,
-      this.real * that.imag + this.imag * that.real,
-    );
+  mul(...operands: Complex[]) {
+    let result = this.clone();
+    for (let operand of operands) {
+      const newReal = result.real * operand.real - result.imag * operand.imag;
+      const newImag = result.real * operand.imag + result.imag * operand.real;
+      result.real = newReal;
+      result.imag = newImag;
 
-    // This can also be written in polar form:
-    // re^it se^iu = rs e^[i(t + u)].
+      // This can also be written in polar form:
+      // re^it se^iu = rs e^[i(t + u)].
 
-    // return Complex.fromPolar(this.abs() * that.abs(), this.arg() + that.arg());
+      // result = Complex.fromPolar(
+      //   result.abs() * operand.abs(),
+      //   result.arg() + operand.arg(),
+      // );
+    }
+    return result;
   }
 
-  // Divides two complex numbers.
+  // Division.
   // (a + bi)/(c + di) = [(ac + bd) + (bc - ad)i]/(c^2 + d^2).
-  div(that: Complex) {
-    const denominator = that.real ** 2 + that.imag ** 2;
-    return new Complex(
-      (this.real * that.real + this.imag * that.imag) / denominator,
-      (this.imag * that.real - this.real * that.imag) / denominator,
-    );
+  div(...operands: Complex[]) {
+    let result = this.clone();
+    for (let operand of operands) {
+      const denominator = operand.real ** 2 + operand.imag ** 2;
+      const newReal = (
+        (result.real * operand.real + result.imag * operand.imag) / denominator
+      );
+      const newImag = (
+        (result.imag * operand.real - result.real * operand.imag) / denominator
+      );
+      result.real = newReal;
+      result.imag = newImag;
 
-    // This can also be written in polar form:
-    // re^it/se^iu = r/s e^[i(t - u)].
+      // This can also be written in polar form:
+      // re^it/se^iu = r/s e^[i(t - u)].
 
-    // return Complex.fromPolar(this.abs() / that.abs(), this.arg() - that.arg());
+      // result = Complex.fromPolar(
+      //   result.abs() / operand.abs(),
+      //   result.arg() - operand.arg(),
+      // );
+    }
+    return result;
   }
 
   // Additive inverse.
@@ -98,7 +130,7 @@ class Complex {
       return String(this.real);
     }
 
-    let imaginary : string;
+    let imaginary: string;
     if (this.imag === 1) {
       imaginary = 'i';
     } else if (this.imag === -1) {

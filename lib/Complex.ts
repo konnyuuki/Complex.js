@@ -6,9 +6,9 @@ class Complex {
 
   // Creates a complex number in rectangular form (i.e., from real and imaginary
   // parts).
-  constructor(realPart: number = 0, imaginaryPart: number = 0) {
-    this.real = realPart;
-    this.imag = imaginaryPart;
+  constructor(real: number = 0, imag: number = 0) {
+    this.real = real;
+    this.imag = imag;
   }
 
   clone() {
@@ -17,11 +17,8 @@ class Complex {
 
   // Creates a complex number in polar form (i.e., from absolute value and
   // argument).
-  static fromPolar(absoluteValue: number, argument: number) {
-    return new Complex(
-      absoluteValue * Math.cos(argument),
-      absoluteValue * Math.sin(argument),
-    );
+  static fromPolar(abs: number, arg: number) {
+    return new Complex(abs * Math.cos(arg), abs * Math.sin(arg));
   }
 
   // Absolute value.
@@ -45,6 +42,15 @@ class Complex {
       result.imag += operand.imag;
     }
     return result;
+
+    // This can also be written in a functional style, and so can `sub`, `mul`,
+    // and `div`:
+
+    // return operands.reduce((result, operand) => {
+    //   result.real += operand.real;
+    //   result.imag += operand.imag;
+    //   return result;
+    // }, this.clone());
   }
 
   // Subtraction.
@@ -63,10 +69,10 @@ class Complex {
   mul(...operands: Complex[]) {
     let result = this.clone();
     for (let operand of operands) {
-      const newReal = result.real * operand.real - result.imag * operand.imag;
-      const newImag = result.real * operand.imag + result.imag * operand.real;
-      result.real = newReal;
-      result.imag = newImag;
+      [result.real, result.imag] = [
+        result.real * operand.real - result.imag * operand.imag,
+        result.real * operand.imag + result.imag * operand.real,
+      ];
 
       // This can also be written in polar form:
       // re^it se^iu = rs e^[i(t + u)].
@@ -85,14 +91,10 @@ class Complex {
     let result = this.clone();
     for (let operand of operands) {
       const denominator = operand.real ** 2 + operand.imag ** 2;
-      const newReal = (
-        (result.real * operand.real + result.imag * operand.imag) / denominator
-      );
-      const newImag = (
-        (result.imag * operand.real - result.real * operand.imag) / denominator
-      );
-      result.real = newReal;
-      result.imag = newImag;
+      [result.real, result.imag] = [
+        (result.real * operand.real + result.imag * operand.imag) / denominator,
+        (result.imag * operand.real - result.real * operand.imag) / denominator,
+      ];
 
       // This can also be written in polar form:
       // re^it/se^iu = r/s e^[i(t - u)].

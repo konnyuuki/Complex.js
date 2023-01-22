@@ -86,7 +86,7 @@ class Complex {
     return this.real === that.real && this.imag === that.imag;
   }
 
-  // String representation in Cartesian form.
+  // String representation in rectangular form.
   toString() {
     // Real.
     if (this.imag === 0) {

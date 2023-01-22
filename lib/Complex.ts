@@ -29,43 +29,49 @@ class Complex {
 
   // Addition.
   // (a + bi) + (c + di) = (a + c) + (b + d)i.
-  add(that: Complex) {
-    return new Complex(this.real + that.real, this.imag + that.imag);
+  add(other: Complex) {
+    return new Complex(this.real + other.real, this.imag + other.imag);
   }
 
   // Subtraction.
   // (a + bi) - (c + di) = (a - c) + (b - d)i.
-  sub(that: Complex) {
-    return new Complex(this.real - that.real, this.imag - that.imag);
+  sub(other: Complex) {
+    return new Complex(this.real - other.real, this.imag - other.imag);
   }
 
   // Multiplication.
   // (a + bi)(c + di) = (ac - bd) + (ad + bc)i.
-  mul(that: Complex) {
+  mul(other: Complex) {
     return new Complex(
-      this.real * that.real - this.imag * that.imag,
-      this.real * that.imag + this.imag * that.real,
+      this.real * other.real - this.imag * other.imag,
+      this.real * other.imag + this.imag * other.real,
     );
 
     // This can also be written in polar form:
     // re^it se^iu = rs e^[i(t + u)].
 
-    // return Complex.fromPolar(this.abs() * that.abs(), this.arg() + that.arg());
+    // return Complex.fromPolar(
+    //   this.abs() * other.abs(),
+    //   this.arg() + other.arg(),
+    // );
   }
 
   // Division.
   // (a + bi)/(c + di) = [(ac + bd) + (bc - ad)i]/(c^2 + d^2).
-  div(that: Complex) {
-    const denominator = that.real ** 2 + that.imag ** 2;
+  div(other: Complex) {
+    const denominator = other.real ** 2 + other.imag ** 2;
     return new Complex(
-      (this.real * that.real + this.imag * that.imag) / denominator,
-      (this.imag * that.real - this.real * that.imag) / denominator,
+      (this.real * other.real + this.imag * other.imag) / denominator,
+      (this.imag * other.real - this.real * other.imag) / denominator,
     );
 
     // This can also be written in polar form:
     // re^it/se^iu = r/s e^[i(t - u)].
 
-    // return Complex.fromPolar(this.abs() / that.abs(), this.arg() - that.arg());
+    // return Complex.fromPolar(
+    //   this.abs() / other.abs(),
+    //   this.arg() - other.arg(),
+    // );
   }
 
   // Additive inverse.
@@ -82,8 +88,8 @@ class Complex {
 
   // Equality.
   // a + bi = c + di iff a = c and b = d.
-  equals(that: Complex) {
-    return this.real === that.real && this.imag === that.imag;
+  equals(other: Complex) {
+    return this.real === other.real && this.imag === other.imag;
   }
 
   // String representation in rectangular form.

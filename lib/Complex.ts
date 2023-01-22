@@ -29,31 +29,19 @@ class Complex {
 
   // Addition.
   // (a + bi) + (c + di) = (a + c) + (b + d)i.
-  add(that: Complex | number) {
-    if (!(that instanceof Complex)) {
-      return new Complex(this.real + that, this.imag);
-    }
-
+  add(that: Complex) {
     return new Complex(this.real + that.real, this.imag + that.imag);
   }
 
   // Subtraction.
   // (a + bi) - (c + di) = (a - c) + (b - d)i.
-  sub(that: Complex | number) {
-    if (!(that instanceof Complex)) {
-      return new Complex(this.real - that, this.imag);
-    }
-
+  sub(that: Complex) {
     return new Complex(this.real - that.real, this.imag - that.imag);
   }
 
   // Multiplication.
   // (a + bi)(c + di) = (ac - bd) + (ad + bc)i.
-  mul(that: Complex | number) {
-    if (!(that instanceof Complex)) {
-      return new Complex(this.real * that, this.imag * that);
-    }
-
+  mul(that: Complex) {
     return new Complex(
       this.real * that.real - this.imag * that.imag,
       this.real * that.imag + this.imag * that.real,
@@ -67,11 +55,7 @@ class Complex {
 
   // Division.
   // (a + bi)/(c + di) = [(ac + bd) + (bc - ad)i]/(c^2 + d^2).
-  div(that: Complex | number) {
-    if (!(that instanceof Complex)) {
-      return new Complex(this.real / that, this.imag / that);
-    }
-
+  div(that: Complex) {
     const denominator = that.real ** 2 + that.imag ** 2;
     return new Complex(
       (this.real * that.real + this.imag * that.imag) / denominator,
@@ -98,11 +82,7 @@ class Complex {
 
   // Equality.
   // a + bi = c + di iff a = c and b = d.
-  equals(that: Complex | number) {
-    if (!(that instanceof Complex)) {
-      return this.real === that && this.imag === 0;
-    }
-
+  equals(that: Complex) {
     return this.real === that.real && this.imag === that.imag;
   }
 

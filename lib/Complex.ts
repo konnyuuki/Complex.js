@@ -174,9 +174,9 @@ export default class Complex {
   // Inverse tangent.
   // arctan(z) = -i/2 ln[(i - z)/(i + z)].
   static atan(z: Complex): Complex {
-    return Complex.I.neg().div(Complex.TWO).mul(
-      Complex.log(Complex.I.sub(z).div(Complex.I.add(z)))
-    );
+    return Complex.I.neg()
+      .div(Complex.TWO)
+      .mul(Complex.log(Complex.I.sub(z).div(Complex.I.add(z))));
   }
 
   // String representation in rectangular form.

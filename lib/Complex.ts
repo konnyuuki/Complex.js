@@ -104,7 +104,7 @@ export default class Complex {
   }
 
   // Exponential function.
-  // e^(a + bi) = e^a e^ib.
+  // exp(a + bi) = exp(a) e^ib.
   static exp(z: Complex): Complex {
     return Complex.fromPolar(Math.exp(z.real), z.imag);
   }
@@ -154,21 +154,15 @@ export default class Complex {
   // Inverse sine.
   // arcsin(z) = -i ln[sqrt(1 - z^2) + iz].
   static asin(z: Complex): Complex {
-    return Complex.I.neg().mul(
-      Complex.log(
-        Complex.sqrt(Complex.ONE.sub(z.mul(z))).add(Complex.I.mul(z))
-      )
-    );
+    const sqrt1z = Complex.sqrt(Complex.ONE.sub(z.mul(z)));
+    return Complex.I.neg().mul(Complex.log(sqrt1z.add(Complex.I.mul(z))));
   }
 
   // Inverse cosine.
   // arccos(z) = -i ln[i sqrt(1 - z^2) + z].
   static acos(z: Complex): Complex {
-    return Complex.I.neg().mul(
-      Complex.log(
-        Complex.I.mul(Complex.sqrt(Complex.ONE.sub(z.mul(z)))).add(z)
-      )
-    );
+    const sqrt1z = Complex.sqrt(Complex.ONE.sub(z.mul(z)));
+    return Complex.I.neg().mul(Complex.log(Complex.I.mul(sqrt1z).add(z)));
   }
 
   // Inverse tangent.

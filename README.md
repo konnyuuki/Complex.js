@@ -3,7 +3,6 @@
 ## Complex
 This is an implementation of [complex data
 type](https://en.wikipedia.org/wiki/Complex_data_type) for JavaScript, only
-it is written in TypeScript, a statically typed language developed by
-Microsoft that transpiles to JavaScript.
+it is written in TypeScript for static typing.
 
 **Kind**: global variable  

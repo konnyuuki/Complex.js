@@ -8,8 +8,10 @@
  * intended for practical use.
  */
 export default class Complex {
-  // Real and imaginary parts.
+  /** Real part. */
   real: number;
+
+  /** Imaginary part. */
   imag: number;
 
   static I: Complex = new Complex(0, 1);

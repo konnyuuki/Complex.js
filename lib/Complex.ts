@@ -1,4 +1,6 @@
-// A complex number class.
+/**
+ * A complex number class.
+ */
 export default class Complex {
   // Real and imaginary parts.
   real: number;

@@ -52,8 +52,7 @@ type][43] for JavaScript, only
 written in TypeScript for static typing.  It is for educational purposes on
 how to implement an [abstract data
 type][44] or what [complex
-numbers][45] are, and is not
-intended for practical use.
+numbers][45] are.
 
 Complex numbers have two representations: rectangular and polar forms.  We
 use the former internally to keep the real and imaginary parts in JavaScript

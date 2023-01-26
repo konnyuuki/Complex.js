@@ -4,7 +4,7 @@
  * intended for educational purposes to learn how it can be implemented or what
  * [complex numbers](https://en.wikipedia.org/wiki/Complex_number) are.
  *
- * Complex numbers have two forms: Cartesian $z = x + iy$ and polar
+ * Complex numbers have two forms: Cartesian $z = a + bi$ and polar
  * $z=re^{i\theta}$.  We use the former as an internal representation, storing
  * the real and imaginary parts as JavaScript numbers (i.e., 64-bit floating
  * point numbers).
@@ -48,40 +48,35 @@ export default class Complex {
   }
 
   /**
-   * Absolute value.
-   * |a + bi| = sqrt(a^2 + b^2).
+   * Returns the absolute value $|a + bi| = \sqrt{a^2 + b^2}$.
    */
   static abs(z: Complex): number {
     return Math.sqrt(z.real ** 2 + z.imag ** 2);
   }
 
   /**
-   * Argument.
-   * arg(a + bi) = atan2(b, a).
+   * Returns the argument $\arg(a + bi) = \atan2(b, a)$.
    */
   static arg(z: Complex): number {
     return Math.atan2(z.imag, z.real);
   }
 
   /**
-   * Addition.
-   * (a + bi) + (c + di) = (a + c) + (b + d)i.
+   * Addition.  $(a + bi) + (c + di) = (a + c) + (b + d)i$.
    */
   add(other: Complex): Complex {
     return new Complex(this.real + other.real, this.imag + other.imag);
   }
 
   /**
-   * Subtraction.
-   * (a + bi) - (c + di) = (a - c) + (b - d)i.
+   * Subtraction.  $(a + bi) - (c + di) = (a - c) + (b - d)i$.
    */
   sub(other: Complex): Complex {
     return new Complex(this.real - other.real, this.imag - other.imag);
   }
 
   /**
-   * Multiplication.
-   * (a + bi)(c + di) = (ac - bd) + (ad + bc)i.
+   * Multiplication.  $(a + bi)(c + di) = (ac - bd) + (ad + bc)i$.
    */
   mul(other: Complex): Complex {
     return new Complex(
@@ -99,8 +94,7 @@ export default class Complex {
   }
 
   /**
-   * Division.
-   * (a + bi)/(c + di) = [(ac + bd) + (bc - ad)i]/(c^2 + d^2).
+   * Division.  $\frac{a + bi}{c + di} = \frac{(ac + bd) + (bc - ad)i}{c^2 + d^2}$.
    */
   div(other: Complex): Complex {
     const denominator = other.real ** 2 + other.imag ** 2;
@@ -119,64 +113,56 @@ export default class Complex {
   }
 
   /**
-   * Additive inverse.
-   * -(a + bi) = -a - bi.
+   * Returns the additive inverse $-(a + bi) = -a - bi$.
    */
   neg(): Complex {
     return new Complex(-this.real, -this.imag);
   }
 
   /**
-   * Complex conjugate.
-   * (a + bi)* = a - bi.
+   * Returns the complex conjugate $\overline{a + bi} = a - bi$.
    */
   conj(): Complex {
     return new Complex(this.real, -this.imag);
   }
 
   /**
-   * Equality.
-   * a + bi = c + di iff a = c and b = d.
+   * Equality.  $a + bi = c + di \iff a = c \and b = d$.
    */
   equals(other: Complex): boolean {
     return this.real === other.real && this.imag === other.imag;
   }
 
   /**
-   * Square root.
-   * sqrt(re^it) = sqrt(r) e^(it/2).
+   * Returns the square root $\sqrt{re^{i\theta}} = \sqrt{r} e^{i\theta/2}$.
    */
   static sqrt(z: Complex): Complex {
     return Complex.fromPolar(Math.sqrt(Complex.abs(z)), Complex.arg(z) / 2);
   }
 
   /**
-   * Exponential function.
-   * exp(a + bi) = exp(a) e^ib.
+   * Exponential function.  $e^{a + bi} = e^a e^{ib}$.
    */
   static exp(z: Complex): Complex {
     return Complex.fromPolar(Math.exp(z.real), z.imag);
   }
 
   /**
-   * Logarithm.
-   * ln(re^it) = ln(r) + it.
+   * Logarithm.  $\ln(re^it) = \ln(r) + it$.
    */
   static log(z: Complex): Complex {
     return new Complex(Math.log(Complex.abs(z)), Complex.arg(z));
   }
 
   /**
-   * Exponentiation.
-   * z^w = e^[w ln(z)].
+   * Exponentiation.  $z^w = e^{w \ln(z)}$.
    */
   static pow(z: Complex, w: Complex): Complex {
     return Complex.exp(w.mul(Complex.log(z)));
   }
 
   /**
-   * Sine.
-   * sin(a + bi) = sin(a) cosh(b) + i cos(a) sinh(b).
+   * Sine.  $\sin(a + bi) = \sin(a) \cosh(b) + i \cos(a) \sinh(b)$.
    */
   static sin(z: Complex): Complex {
     return new Complex(
@@ -186,8 +172,7 @@ export default class Complex {
   }
 
   /**
-   * Cosine.
-   * cos(a + bi) = cos(a) cosh(b) - i sin(a) sinh(b).
+   * Cosine.  $\cos(a + bi) = \cos(a) \cosh(b) - i \sin(a) \sinh(b)$.
    */
   static cos(z: Complex): Complex {
     return new Complex(
@@ -197,8 +182,7 @@ export default class Complex {
   }
 
   /**
-   * Tangent.
-   * tan(a + bi) = [sin(2a) + i sinh(2b)]/[cos(2a) + cosh(2b)].
+   * Tangent.  $\tan(a + bi) = \frac{\sin(2a) + i \sinh(2b)}{\cos(2a) + \cosh(2b)}$.
    */
   static tan(z: Complex): Complex {
     const twoReal = 2 * z.real;
@@ -211,8 +195,7 @@ export default class Complex {
   }
 
   /**
-   * Inverse sine.
-   * arcsin(z) = -i ln[sqrt(1 - z^2) + iz].
+   * Inverse sine.  $\arcsin(z) = -i \ln(\sqrt{1 - z^2} + iz)$.
    */
   static asin(z: Complex): Complex {
     const sqrt1z = Complex.sqrt(Complex.ONE.sub(z.mul(z)));
@@ -220,8 +203,7 @@ export default class Complex {
   }
 
   /**
-   * Inverse cosine.
-   * arccos(z) = -i ln[i sqrt(1 - z^2) + z].
+   * Inverse cosine.  $\arccos(z) = -i \ln(i \sqrt{1 - z^2} + z)$.
    */
   static acos(z: Complex): Complex {
     const sqrt1z = Complex.sqrt(Complex.ONE.sub(z.mul(z)));
@@ -229,8 +211,7 @@ export default class Complex {
   }
 
   /**
-   * Inverse tangent.
-   * arctan(z) = -i/2 ln[(i - z)/(i + z)].
+   * Inverse tangent.  $\arctan(z) = -\frac{i}{2} \ln \left( \frac{i - z}{i + z} \right)$.
    */
   static atan(z: Complex): Complex {
     return Complex.I.neg()

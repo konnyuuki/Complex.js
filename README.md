@@ -57,7 +57,7 @@ type][48] in TypeScript.  It is
 intended for educational purposes to learn how it can be implemented or what
 [complex numbers][49] are.
 
-Complex numbers have two forms: Cartesian $z = x + iy$ and polar
+Complex numbers have two forms: Cartesian $z = a + bi$ and polar
 $z=re^{i\theta}$.  We use the former as an internal representation, storing
 the real and imaginary parts as JavaScript numbers (i.e., 64-bit floating
 point numbers).
@@ -89,8 +89,7 @@ Type: [number][50]
 
 ### add
 
-Addition.
-(a + bi) + (c + di) = (a + c) + (b + d)i.
+Addition.  $(a + bi) + (c + di) = (a + c) + (b + d)i$.
 
 #### Parameters
 
@@ -100,8 +99,7 @@ Returns **[Complex][1]**&#x20;
 
 ### sub
 
-Subtraction.
-(a + bi) - (c + di) = (a - c) + (b - d)i.
+Subtraction.  $(a + bi) - (c + di) = (a - c) + (b - d)i$.
 
 #### Parameters
 
@@ -111,8 +109,7 @@ Returns **[Complex][1]**&#x20;
 
 ### mul
 
-Multiplication.
-(a + bi)(c + di) = (ac - bd) + (ad + bc)i.
+Multiplication.  $(a + bi)(c + di) = (ac - bd) + (ad + bc)i$.
 
 #### Parameters
 
@@ -122,8 +119,7 @@ Returns **[Complex][1]**&#x20;
 
 ### div
 
-Division.
-(a + bi)/(c + di) = \[(ac + bd) + (bc - ad)i]/(c^2 + d^2).
+Division.  $\frac{a + bi}{c + di} = \frac{(ac + bd) + (bc - ad)i}{c^2 + d^2}$.
 
 #### Parameters
 
@@ -133,22 +129,19 @@ Returns **[Complex][1]**&#x20;
 
 ### neg
 
-Additive inverse.
--(a + bi) = -a - bi.
+Returns the additive inverse $-(a + bi) = -a - bi$.
 
 Returns **[Complex][1]**&#x20;
 
 ### conj
 
-Complex conjugate.
-(a + bi)\* = a - bi.
+Returns the complex conjugate $\overline{a + bi} = a - bi$.
 
 Returns **[Complex][1]**&#x20;
 
 ### equals
 
-Equality.
-a + bi = c + di iff a = c and b = d.
+Equality.  $a + bi = c + di \iff a = c \and b = d$.
 
 #### Parameters
 
@@ -191,8 +184,7 @@ Returns **[Complex][1]**&#x20;
 
 ### abs
 
-Absolute value.
-|a + bi| = sqrt(a^2 + b^2).
+Returns the absolute value $|a + bi| = \sqrt{a^2 + b^2}$.
 
 #### Parameters
 
@@ -202,8 +194,7 @@ Returns **[number][50]**&#x20;
 
 ### arg
 
-Argument.
-arg(a + bi) = atan2(b, a).
+Returns the argument $\arg(a + bi) = \atan2(b, a)$.
 
 #### Parameters
 
@@ -213,8 +204,7 @@ Returns **[number][50]**&#x20;
 
 ### sqrt
 
-Square root.
-sqrt(re^it) = sqrt(r) e^(it/2).
+Returns the square root $\sqrt{re^{i\theta}} = \sqrt{r} e^{i\theta/2}$.
 
 #### Parameters
 
@@ -224,8 +214,7 @@ Returns **[Complex][1]**&#x20;
 
 ### exp
 
-Exponential function.
-exp(a + bi) = exp(a) e^ib.
+Exponential function.  $e^{a + bi} = e^a e^{ib}$.
 
 #### Parameters
 
@@ -235,8 +224,7 @@ Returns **[Complex][1]**&#x20;
 
 ### log
 
-Logarithm.
-ln(re^it) = ln(r) + it.
+Logarithm.  $\ln(re^it) = \ln(r) + it$.
 
 #### Parameters
 
@@ -246,8 +234,7 @@ Returns **[Complex][1]**&#x20;
 
 ### pow
 
-Exponentiation.
-z^w = e^\[w ln(z)].
+Exponentiation.  $z^w = e^{w \ln(z)}$.
 
 #### Parameters
 
@@ -258,8 +245,7 @@ Returns **[Complex][1]**&#x20;
 
 ### sin
 
-Sine.
-sin(a + bi) = sin(a) cosh(b) + i cos(a) sinh(b).
+Sine.  $\sin(a + bi) = \sin(a) \cosh(b) + i \cos(a) \sinh(b)$.
 
 #### Parameters
 
@@ -269,8 +255,7 @@ Returns **[Complex][1]**&#x20;
 
 ### cos
 
-Cosine.
-cos(a + bi) = cos(a) cosh(b) - i sin(a) sinh(b).
+Cosine.  $\cos(a + bi) = \cos(a) \cosh(b) - i \sin(a) \sinh(b)$.
 
 #### Parameters
 
@@ -280,8 +265,7 @@ Returns **[Complex][1]**&#x20;
 
 ### tan
 
-Tangent.
-tan(a + bi) = \[sin(2a) + i sinh(2b)]/\[cos(2a) + cosh(2b)].
+Tangent.  $\tan(a + bi) = \frac{\sin(2a) + i \sinh(2b)}{\cos(2a) + \cosh(2b)}$.
 
 #### Parameters
 
@@ -291,8 +275,7 @@ Returns **[Complex][1]**&#x20;
 
 ### asin
 
-Inverse sine.
-arcsin(z) = -i ln\[sqrt(1 - z^2) + iz].
+Inverse sine.  $\arcsin(z) = -i \ln(\sqrt{1 - z^2} + iz)$.
 
 #### Parameters
 
@@ -302,8 +285,7 @@ Returns **[Complex][1]**&#x20;
 
 ### acos
 
-Inverse cosine.
-arccos(z) = -i ln\[i sqrt(1 - z^2) + z].
+Inverse cosine.  $\arccos(z) = -i \ln(i \sqrt{1 - z^2} + z)$.
 
 #### Parameters
 
@@ -313,8 +295,7 @@ Returns **[Complex][1]**&#x20;
 
 ### atan
 
-Inverse tangent.
-arctan(z) = -i/2 ln\[(i - z)/(i + z)].
+Inverse tangent.  $\arctan(z) = -\frac{i}{2} \ln \left( \frac{i - z}{i + z} \right)$.
 
 #### Parameters
 

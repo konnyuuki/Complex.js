@@ -113,7 +113,7 @@ var Complex = /** @class */ (function () {
         return Complex.fromPolar(Math.exp(z.real), z.imag);
     };
     /**
-     * Logarithm.  $\ln(re^it) = \ln(r) + it$.
+     * Logarithm.  $\ln(re^{i\theta}) = \ln(r) + i\theta$.
      */
     Complex.log = function (z) {
         return new Complex(Math.log(Complex.abs(z)), Complex.arg(z));

@@ -148,7 +148,7 @@ export default class Complex {
   }
 
   /**
-   * Logarithm.  $\ln(re^it) = \ln(r) + it$.
+   * Logarithm.  $\ln(re^{i\theta}) = \ln(r) + i\theta$.
    */
   static log(z: Complex): Complex {
     return new Complex(Math.log(Complex.abs(z)), Complex.arg(z));

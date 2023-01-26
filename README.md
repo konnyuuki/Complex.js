@@ -224,7 +224,7 @@ Returns **[Complex][1]**&#x20;
 
 ### log
 
-Logarithm.  $\ln(re^it) = \ln(r) + it$.
+Logarithm.  $\ln(re^{i\theta}) = \ln(r) + i\theta$.
 
 #### Parameters
 

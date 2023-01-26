@@ -62,11 +62,11 @@ $z=re^{i\theta}$.  We use the former as an internal representation, storing
 the real and imaginary parts as JavaScript numbers (i.e., 64-bit floating
 point numbers).
 
-We define arithmetic operations and a `Complex` version of the static methods
-of `Math` as specified in ES3.  Since JavaScript does not support operator
-overloading, arithmetic operations are provided as `add`, `sub`, `mul`, and
-`div` instance methods.  For instance, $e^{i\pi}$ becomes
-`Complex.exp(Complex.I.mul(Math.PI))`.
+The `Complex` class provides arithmetic operations on complex numbers and a
+complex version of the static methods of the built-in `Math` object.  Since
+JavaScript does not support operator overloading, arithmetic operations are
+provided as `add`, `sub`, `mul`, and `div` instance methods.  For instance,
+$e^{i\pi}$ becomes `Complex.exp(Complex.I.mul(Math.PI))`.
 
 ### Parameters
 

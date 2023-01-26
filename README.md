@@ -47,12 +47,10 @@
 
 ## Complex
 
-This is an implementation of [complex data
-type][43] for JavaScript, only
-written in TypeScript for static typing.  It is for educational purposes on
-how to implement an [abstract data
-type][44] or what [complex
-numbers][45] are.
+This is a TypeScript implementation of a [complex data
+type][43].  It is for
+educational purposes on how it is implemented or what [complex
+numbers][44] are.
 
 Complex numbers have two representations: rectangular and polar forms.  We
 use the former internally to keep the real and imaginary parts in JavaScript
@@ -60,8 +58,8 @@ numbers (i.e., 64-bit floating-point numbers).
 
 ### Parameters
 
-*   `real` **[number][46]**  (optional, default `0`)
-*   `imag` **[number][46]**  (optional, default `0`)
+*   `real` **[number][45]**  (optional, default `0`)
+*   `imag` **[number][45]**  (optional, default `0`)
 
 ### add
 
@@ -130,13 +128,13 @@ a + bi = c + di iff a = c and b = d.
 
 *   `other` **[Complex][1]**&#x20;
 
-Returns **[boolean][47]**&#x20;
+Returns **[boolean][46]**&#x20;
 
 ### toString
 
 String representation in rectangular form.
 
-Returns **[string][48]**&#x20;
+Returns **[string][47]**&#x20;
 
 ### I
 
@@ -148,8 +146,8 @@ Creates a complex number in polar form.
 
 #### Parameters
 
-*   `abs` **[number][46]**  (optional, default `0`)
-*   `arg` **[number][46]**  (optional, default `0`)
+*   `abs` **[number][45]**  (optional, default `0`)
+*   `arg` **[number][45]**  (optional, default `0`)
 
 Returns **[Complex][1]**&#x20;
 
@@ -162,7 +160,7 @@ Absolute value.
 
 *   `z` **[Complex][1]**&#x20;
 
-Returns **[number][46]**&#x20;
+Returns **[number][45]**&#x20;
 
 ### arg
 
@@ -173,7 +171,7 @@ arg(a + bi) = atan2(b, a).
 
 *   `z` **[Complex][1]**&#x20;
 
-Returns **[number][46]**&#x20;
+Returns **[number][45]**&#x20;
 
 ### sqrt
 
@@ -372,12 +370,10 @@ Returns **[Complex][1]**&#x20;
 
 [43]: https://en.wikipedia.org/wiki/Complex_data_type
 
-[44]: https://en.wikipedia.org/wiki/Abstract_data_type
+[44]: https://en.wikipedia.org/wiki/Complex_number
 
-[45]: https://en.wikipedia.org/wiki/Complex_number
+[45]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
 
-[46]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[46]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
 
-[47]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
-
-[48]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[47]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String

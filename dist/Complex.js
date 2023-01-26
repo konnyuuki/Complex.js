@@ -11,7 +11,7 @@ exports.__esModule = true;
  * the real and imaginary parts as JavaScript numbers (i.e., 64-bit floating
  * point numbers).
  *
- * The `Complex` class provides arithmetic operations on complex numbers and a
+ * The `Complex` class defines arithmetic operations on complex numbers and a
  * complex version of the static methods of the built-in `Math` object.  Since
  * JavaScript does not support operator overloading, arithmetic operations are
  * provided as `add`, `sub`, `mul`, and `div` instance methods.  For instance,

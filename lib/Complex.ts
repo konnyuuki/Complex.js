@@ -127,7 +127,7 @@ export default class Complex {
   }
 
   /**
-   * Equality.  $a + bi = c + di \iff a = c \and b = d$.
+   * Equality.  $a + bi = c + di \iff a = c \text{ and } b = d$.
    */
   equals(other: Complex): boolean {
     return this.real === other.real && this.imag === other.imag;

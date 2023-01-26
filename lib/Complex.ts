@@ -55,7 +55,7 @@ export default class Complex {
   }
 
   /**
-   * Returns the argument $\arg(a + bi) = \atan2(b, a)$.
+   * Returns the argument $\arg(a + bi) = \operatorname{atan2}(b, a)$.
    */
   static arg(z: Complex): number {
     return Math.atan2(z.imag, z.real);

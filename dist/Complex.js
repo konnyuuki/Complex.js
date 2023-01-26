@@ -40,7 +40,7 @@ var Complex = /** @class */ (function () {
         return Math.sqrt(Math.pow(z.real, 2) + Math.pow(z.imag, 2));
     };
     /**
-     * Returns the argument $\arg(a + bi) = \atan2(b, a)$.
+     * Returns the argument $\arg(a + bi) = \operatorname{atan2}(b, a)$.
      */
     Complex.arg = function (z) {
         return Math.atan2(z.imag, z.real);

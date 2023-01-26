@@ -194,7 +194,7 @@ Returns **[number][50]**&#x20;
 
 ### arg
 
-Returns the argument $\arg(a + bi) = \atan2(b, a)$.
+Returns the argument $\arg(a + bi) = \operatorname{atan2}(b, a)$.
 
 #### Parameters
 

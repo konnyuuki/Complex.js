@@ -212,7 +212,7 @@ Returns **[Complex][1]**&#x20;
 
 ### exp
 
-Exponential function.  $e^{a + bi} = e^a e^{ib}$.
+Exponential function.  $e^{a + bi} = e^a e^{bi}$.
 
 #### Parameters
 

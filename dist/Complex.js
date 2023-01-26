@@ -105,7 +105,7 @@ var Complex = /** @class */ (function () {
         return Complex.fromPolar(Math.sqrt(Complex.abs(z)), Complex.arg(z) / 2);
     };
     /**
-     * Exponential function.  $e^{a + bi} = e^a e^{ib}$.
+     * Exponential function.  $e^{a + bi} = e^a e^{bi}$.
      */
     Complex.exp = function (z) {
         return Complex.fromPolar(Math.exp(z.real), z.imag);

@@ -139,7 +139,7 @@ export default class Complex {
   }
 
   /**
-   * Exponential function.  $e^{a + bi} = e^a e^{ib}$.
+   * Exponential function.  $e^{a + bi} = e^a e^{bi}$.
    */
   static exp(z: Complex): Complex {
     return Complex.fromPolar(Math.exp(z.real), z.imag);

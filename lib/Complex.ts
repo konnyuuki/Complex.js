@@ -13,9 +13,7 @@
  * of `Math` as specified in ES3.  Since JavaScript does not support operator
  * overloading, arithmetic operations are provided as `add`, `sub`, `mul`, and
  * `div` instance methods.  For instance, $e^{i\pi}$ becomes
- * `Complex.exp(Complex.I.mul(Math.PI))` instead of
- * `Complex.I.mul(Math.PI).exp()`.  We made this choice because it is more
- * readable than the latter.
+ * `Complex.exp(Complex.I.mul(Math.PI))`.
  */
 export default class Complex {
   /** Real part. */

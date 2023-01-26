@@ -7,9 +7,15 @@ exports.__esModule = true;
  * [complex numbers](https://en.wikipedia.org/wiki/Complex_number) are.
  *
  * Complex numbers have two forms: Cartesian $z = x + iy$ and polar
- * $z = re^{i\theta}$.  We use the former as an internal representation,
- * storing the real and imaginary parts as JavaScript numbers (i.e., 64-bit
- * floating point numbers).
+ * $z=re^{i\theta}$.  We use the former as an internal representation, storing
+ * the real and imaginary parts as JavaScript numbers (i.e., 64-bit floating
+ * point numbers).
+ *
+ * We define arithmetic operations and a `Complex` version of the static methods
+ * of `Math` as specified in ES3.  That is, $e^{i\pi}$ becomes
+ * `Complex.exp(Complex.I.mul(Complex.PI))` instead of
+ * `Complex.I.mul(Math.PI).exp()`.  We made this choice because it is more
+ * readable than the latter.
  */
 var Complex = /** @class */ (function () {
     /** Creates a complex number in rectangular form. */

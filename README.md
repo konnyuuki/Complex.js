@@ -49,7 +49,7 @@
 
 This is an implementation of a [complex data
 type][43] in TypeScript.  It was
-created for educational purposes to show how it is implemented or what
+created for educational purposes to show how it can be implemented or what
 [complex numbers][44] are.
 
 Complex numbers have two representations: rectangular and polar forms.  We

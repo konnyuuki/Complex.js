@@ -8,12 +8,12 @@
  * $z=re^{i\theta}$.  We use the former as an internal representation, storing
  * the real and imaginary parts as JavaScript numbers (i.e., 64-bit floating
  * point numbers).
- *
- * @property real Real part.
- * @property imag Imaginary part.
  */
 export default class Complex {
+  /** Real part. */
   real: number;
+
+  /** Imaginary part. */
   imag: number;
 
   /** The imaginary unit. */

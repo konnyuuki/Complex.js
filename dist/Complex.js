@@ -10,9 +10,6 @@ exports.__esModule = true;
  * $z=re^{i\theta}$.  We use the former as an internal representation, storing
  * the real and imaginary parts as JavaScript numbers (i.e., 64-bit floating
  * point numbers).
- *
- * @property real Real part.
- * @property imag Imaginary part.
  */
 var Complex = /** @class */ (function () {
     /** Creates a complex number in rectangular form. */

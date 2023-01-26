@@ -275,7 +275,7 @@ Returns **[Complex][1]**&#x20;
 
 ### asin
 
-Inverse sine.  $\arcsin(z) = -i \ln(\sqrt{1 - z^2} + iz)$.
+Inverse sine.  $\arcsin(z) = -i \ln \left( \sqrt{1 - z^2} + iz \right)$.
 
 #### Parameters
 
@@ -285,7 +285,7 @@ Returns **[Complex][1]**&#x20;
 
 ### acos
 
-Inverse cosine.  $\arccos(z) = -i \ln(i \sqrt{1 - z^2} + z)$.
+Inverse cosine.  $\arccos(z) = -i \ln \left( i \sqrt{1 - z^2} + z \right)$.
 
 #### Parameters
 

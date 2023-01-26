@@ -195,7 +195,7 @@ export default class Complex {
   }
 
   /**
-   * Inverse sine.  $\arcsin(z) = -i \ln(\sqrt{1 - z^2} + iz)$.
+   * Inverse sine.  $\arcsin(z) = -i \ln \left( \sqrt{1 - z^2} + iz \right)$.
    */
   static asin(z: Complex): Complex {
     const sqrt1z = Complex.sqrt(Complex.ONE.sub(z.mul(z)));
@@ -203,7 +203,7 @@ export default class Complex {
   }
 
   /**
-   * Inverse cosine.  $\arccos(z) = -i \ln(i \sqrt{1 - z^2} + z)$.
+   * Inverse cosine.  $\arccos(z) = -i \ln \left( i \sqrt{1 - z^2} + z \right)$.
    */
   static acos(z: Complex): Complex {
     const sqrt1z = Complex.sqrt(Complex.ONE.sub(z.mul(z)));

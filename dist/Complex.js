@@ -146,14 +146,14 @@ var Complex = /** @class */ (function () {
         return new Complex(Math.sin(twoReal) / denominator, Math.sinh(twoImag) / denominator);
     };
     /**
-     * Inverse sine.  $\arcsin(z) = -i \ln(\sqrt{1 - z^2} + iz)$.
+     * Inverse sine.  $\arcsin(z) = -i \ln \left( \sqrt{1 - z^2} + iz \right)$.
      */
     Complex.asin = function (z) {
         var sqrt1z = Complex.sqrt(Complex.ONE.sub(z.mul(z)));
         return Complex.I.neg().mul(Complex.log(sqrt1z.add(Complex.I.mul(z))));
     };
     /**
-     * Inverse cosine.  $\arccos(z) = -i \ln(i \sqrt{1 - z^2} + z)$.
+     * Inverse cosine.  $\arccos(z) = -i \ln \left( i \sqrt{1 - z^2} + z \right)$.
      */
     Complex.acos = function (z) {
         var sqrt1z = Complex.sqrt(Complex.ONE.sub(z.mul(z)));

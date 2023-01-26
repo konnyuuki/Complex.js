@@ -56,12 +56,11 @@ var Complex = /** @class */ (function () {
         return new Complex(this.real - other.real, this.imag - other.imag);
     };
     /**
-     * Multiplication.  $(a + bi)(c + di) = (ac - bd) + (ad + bc)i$.
+     * Multiplication.  $(a + bi)(c + di) = (ac - bd) + (ad + bc)i$.  This can
+     * also be written in polar form: $r_1 e^{i\theta_1} r_2 e^{i\theta_2} = r_1 r_2 e^{i(\theta_1 + \theta_2)}$.
      */
     Complex.prototype.mul = function (other) {
         return new Complex(this.real * other.real - this.imag * other.imag, this.real * other.imag + this.imag * other.real);
-        // This can also be written in polar form:
-        // re^it se^iu = rs e^[i(t + u)].
         // return Complex.fromPolar(
         //   Complex.abs(this) * Complex.abs(other),
         //   Complex.arg(this) + Complex.arg(other),
@@ -69,12 +68,12 @@ var Complex = /** @class */ (function () {
     };
     /**
      * Division.  $\displaystyle \frac{a + bi}{c + di} = \frac{(ac + bd) + (bc - ad)i}{c^2 + d^2}$.
+     * This can also be written in polar form:
+     * $\displaystyle \frac{r_1 e^{i\theta_1}}{r_2 e^{i\theta_2}} = \frac{r_1}{r_2} e^{i(\theta_1 - \theta_2)}$.
      */
     Complex.prototype.div = function (other) {
         var denominator = Math.pow(other.real, 2) + Math.pow(other.imag, 2);
         return new Complex((this.real * other.real + this.imag * other.imag) / denominator, (this.imag * other.real - this.real * other.imag) / denominator);
-        // This can also be written in polar form:
-        // re^it/se^iu = r/s e^[i(t - u)].
         // return Complex.fromPolar(
         //   Complex.abs(this) / Complex.abs(other),
         //   Complex.arg(this) - Complex.arg(other),

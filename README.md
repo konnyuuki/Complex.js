@@ -107,7 +107,8 @@ Returns **[Complex][1]**&#x20;
 
 ### mul
 
-Multiplication.  $(a + bi)(c + di) = (ac - bd) + (ad + bc)i$.
+Multiplication.  $(a + bi)(c + di) = (ac - bd) + (ad + bc)i$.  This can
+also be written in polar form: $r\_1 e^{i\theta\_1} r\_2 e^{i\theta\_2} = r\_1 r\_2 e^{i(\theta\_1 + \theta\_2)}$.
 
 #### Parameters
 
@@ -118,6 +119,8 @@ Returns **[Complex][1]**&#x20;
 ### div
 
 Division.  $\displaystyle \frac{a + bi}{c + di} = \frac{(ac + bd) + (bc - ad)i}{c^2 + d^2}$.
+This can also be written in polar form:
+$\displaystyle \frac{r\_1 e^{i\theta\_1}}{r\_2 e^{i\theta\_2}} = \frac{r\_1}{r\_2} e^{i(\theta\_1 - \theta\_2)}$.
 
 #### Parameters
 

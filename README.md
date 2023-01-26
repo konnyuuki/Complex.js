@@ -10,3 +10,10 @@ numbers](https://en.wikipedia.org/wiki/Complex_number) are, and is not
 intended for practical use.
 
 **Kind**: global variable  
+**Properties**
+
+| Name | Description |
+| --- | --- |
+| real | Real part. |
+| imag | Imaginary part. |
+

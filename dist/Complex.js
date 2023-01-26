@@ -8,6 +8,9 @@ exports.__esModule = true;
  * type](https://en.wikipedia.org/wiki/Abstract_data_type) or what [complex
  * numbers](https://en.wikipedia.org/wiki/Complex_number) are, and is not
  * intended for practical use.
+ *
+ * @property real Real part.
+ * @property imag Imaginary part.
  */
 var Complex = /** @class */ (function () {
     // Creates a complex number in rectangular form.

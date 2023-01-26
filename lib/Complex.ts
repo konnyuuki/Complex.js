@@ -6,12 +6,12 @@
  * type](https://en.wikipedia.org/wiki/Abstract_data_type) or what [complex
  * numbers](https://en.wikipedia.org/wiki/Complex_number) are, and is not
  * intended for practical use.
+ * 
+ * @property real Real part.
+ * @property imag Imaginary part.
  */
 export default class Complex {
-  /** Real part. */
   real: number;
-
-  /** Imaginary part. */
   imag: number;
 
   static I: Complex = new Complex(0, 1);

@@ -6,7 +6,7 @@ exports.__esModule = true;
  * intended for educational purposes to learn how it can be implemented or what
  * [complex numbers](https://en.wikipedia.org/wiki/Complex_number) are.
  *
- * Complex numbers have two forms: Cartesian a + bi and polar re^it.  We use the
+ * Complex numbers have two forms: Cartesian $a + bi$ and polar $re^it$.  We use the
  * former internally to keep the real and imaginary parts in JavaScript numbers
  * (i.e., 64-bit floating-point numbers).
  *

@@ -3,7 +3,7 @@
 
 
 - [Classes](#classes)
-  - [Class: default](#class-default)
+  - [Class: Complex](#class-Complex)
     - [Table of contents](#table-of-contents)
     - [Constructors](#constructors)
     - [Properties](#properties)
@@ -22,9 +22,9 @@
 # Classes
 
 
-<a name="classesdefaultmd"></a>
+<a name="classesComplexmd"></a>
 
-## Class: default
+## Class: Complex
 
 This is an implementation of a [complex data
 type](https://en.wikipedia.org/wiki/Complex_data_type) in TypeScript.  It is
@@ -85,7 +85,7 @@ $e^{i\pi}$ becomes `Complex.exp(Complex.I.mul(Math.PI))`.
 
 #### constructor
 
-**new default**(`real?`, `imag?`)
+**new Complex**(`real?`, `imag?`)
 
 Creates a complex number in Cartesian form.
 
@@ -98,7 +98,7 @@ Creates a complex number in Cartesian form.
 
 ##### Defined in
 
-[Complex.ts:38](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L38)
+[Complex.ts:38](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L38)
 
 ### Properties
 
@@ -110,7 +110,7 @@ Imaginary part.
 
 ##### Defined in
 
-[Complex.ts:23](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L23)
+[Complex.ts:23](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L23)
 
 ___
 
@@ -122,61 +122,61 @@ Real part.
 
 ##### Defined in
 
-[Complex.ts:20](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L20)
+[Complex.ts:20](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L20)
 
 ___
 
 #### I
 
- `Static` **I**: [`default`](#classesdefaultmd)
+ `Static` **I**: [`Complex`](#classesComplexmd)
 
 The imaginary unit.
 
 ##### Defined in
 
-[Complex.ts:26](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L26)
+[Complex.ts:26](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L26)
 
 ___
 
 #### ONE
 
- `Static` **ONE**: [`default`](#classesdefaultmd)
+ `Static` **ONE**: [`Complex`](#classesComplexmd)
 
 One, as a complex number.
 
 ##### Defined in
 
-[Complex.ts:32](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L32)
+[Complex.ts:32](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L32)
 
 ___
 
 #### TWO
 
- `Static` **TWO**: [`default`](#classesdefaultmd)
+ `Static` **TWO**: [`Complex`](#classesComplexmd)
 
 Two, as a complex number.
 
 ##### Defined in
 
-[Complex.ts:35](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L35)
+[Complex.ts:35](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L35)
 
 ___
 
 #### ZERO
 
- `Static` **ZERO**: [`default`](#classesdefaultmd)
+ `Static` **ZERO**: [`Complex`](#classesComplexmd)
 
 Zero, as a complex number.
 
 ##### Defined in
 
-[Complex.ts:29](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L29)
+[Complex.ts:29](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L29)
 
 ### Methods
 
 #### add
 
-**add**(`other`): [`default`](#classesdefaultmd)
+**add**(`other`): [`Complex`](#classesComplexmd)
 
 Addition.  $(a + bi) + (c + di) = (a + c) + (b + d)i$.
 
@@ -184,37 +184,37 @@ Addition.  $(a + bi) + (c + di) = (a + c) + (b + d)i$.
 
 | Name | Type |
 | :------ | :------ |
-| `other` | [`default`](#classesdefaultmd) |
+| `other` | [`Complex`](#classesComplexmd) |
 
 ##### Returns
 
-[`default`](#classesdefaultmd)
+[`Complex`](#classesComplexmd)
 
 ##### Defined in
 
-[Complex.ts:65](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L65)
+[Complex.ts:65](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L65)
 
 ___
 
 #### conj
 
-**conj**(): [`default`](#classesdefaultmd)
+**conj**(): [`Complex`](#classesComplexmd)
 
 Returns the complex conjugate $\overline{a + bi} = a - bi$.
 
 ##### Returns
 
-[`default`](#classesdefaultmd)
+[`Complex`](#classesComplexmd)
 
 ##### Defined in
 
-[Complex.ts:120](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L120)
+[Complex.ts:120](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L120)
 
 ___
 
 #### div
 
-**div**(`other`): [`default`](#classesdefaultmd)
+**div**(`other`): [`Complex`](#classesComplexmd)
 
 Division.  $\displaystyle \frac{a + bi}{c + di} = \frac{(ac + bd) + (bc - ad)i}{c^2 + d^2}$.
 This can also be written in polar form:
@@ -224,15 +224,15 @@ $\displaystyle \frac{r_1 e^{i\theta_1}}{r_2 e^{i\theta_2}} = \frac{r_1}{r_2} e^{
 
 | Name | Type |
 | :------ | :------ |
-| `other` | [`default`](#classesdefaultmd) |
+| `other` | [`Complex`](#classesComplexmd) |
 
 ##### Returns
 
-[`default`](#classesdefaultmd)
+[`Complex`](#classesComplexmd)
 
 ##### Defined in
 
-[Complex.ts:97](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L97)
+[Complex.ts:97](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L97)
 
 ___
 
@@ -246,7 +246,7 @@ Equality.  $a + bi = c + di \iff a = c \wedge b = d$.
 
 | Name | Type |
 | :------ | :------ |
-| `other` | [`default`](#classesdefaultmd) |
+| `other` | [`Complex`](#classesComplexmd) |
 
 ##### Returns
 
@@ -254,13 +254,13 @@ Equality.  $a + bi = c + di \iff a = c \wedge b = d$.
 
 ##### Defined in
 
-[Complex.ts:127](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L127)
+[Complex.ts:127](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L127)
 
 ___
 
 #### mul
 
-**mul**(`other`): [`default`](#classesdefaultmd)
+**mul**(`other`): [`Complex`](#classesComplexmd)
 
 Multiplication.  $(a + bi)(c + di) = (ac - bd) + (ad + bc)i$.  This can
 also be written in polar form: $r_1 e^{i\theta_1} r_2 e^{i\theta_2} = r_1 r_2 e^{i(\theta_1 + \theta_2)}$.
@@ -269,37 +269,37 @@ also be written in polar form: $r_1 e^{i\theta_1} r_2 e^{i\theta_2} = r_1 r_2 e^
 
 | Name | Type |
 | :------ | :------ |
-| `other` | [`default`](#classesdefaultmd) |
+| `other` | [`Complex`](#classesComplexmd) |
 
 ##### Returns
 
-[`default`](#classesdefaultmd)
+[`Complex`](#classesComplexmd)
 
 ##### Defined in
 
-[Complex.ts:80](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L80)
+[Complex.ts:80](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L80)
 
 ___
 
 #### neg
 
-**neg**(): [`default`](#classesdefaultmd)
+**neg**(): [`Complex`](#classesComplexmd)
 
 Returns the additive inverse $-(a + bi) = -a - bi$.
 
 ##### Returns
 
-[`default`](#classesdefaultmd)
+[`Complex`](#classesComplexmd)
 
 ##### Defined in
 
-[Complex.ts:113](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L113)
+[Complex.ts:113](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L113)
 
 ___
 
 #### sub
 
-**sub**(`other`): [`default`](#classesdefaultmd)
+**sub**(`other`): [`Complex`](#classesComplexmd)
 
 Subtraction.  $(a + bi) - (c + di) = (a - c) + (b - d)i$.
 
@@ -307,15 +307,15 @@ Subtraction.  $(a + bi) - (c + di) = (a - c) + (b - d)i$.
 
 | Name | Type |
 | :------ | :------ |
-| `other` | [`default`](#classesdefaultmd) |
+| `other` | [`Complex`](#classesComplexmd) |
 
 ##### Returns
 
-[`default`](#classesdefaultmd)
+[`Complex`](#classesComplexmd)
 
 ##### Defined in
 
-[Complex.ts:72](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L72)
+[Complex.ts:72](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L72)
 
 ___
 
@@ -331,7 +331,7 @@ String representation in Cartesian form.
 
 ##### Defined in
 
-[Complex.ts:218](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L218)
+[Complex.ts:218](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L218)
 
 ___
 
@@ -345,7 +345,7 @@ Returns the absolute value $|a + bi| = \sqrt{a^2 + b^2}$.
 
 | Name | Type |
 | :------ | :------ |
-| `z` | [`default`](#classesdefaultmd) |
+| `z` | [`Complex`](#classesComplexmd) |
 
 ##### Returns
 
@@ -353,13 +353,13 @@ Returns the absolute value $|a + bi| = \sqrt{a^2 + b^2}$.
 
 ##### Defined in
 
-[Complex.ts:51](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L51)
+[Complex.ts:51](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L51)
 
 ___
 
 #### acos
 
-`Static` **acos**(`z`): [`default`](#classesdefaultmd)
+`Static` **acos**(`z`): [`Complex`](#classesComplexmd)
 
 Inverse cosine.  $\arccos(z) = -i \ln \left( i \sqrt{1 - z^2} + z \right)$.
 
@@ -367,15 +367,15 @@ Inverse cosine.  $\arccos(z) = -i \ln \left( i \sqrt{1 - z^2} + z \right)$.
 
 | Name | Type |
 | :------ | :------ |
-| `z` | [`default`](#classesdefaultmd) |
+| `z` | [`Complex`](#classesComplexmd) |
 
 ##### Returns
 
-[`default`](#classesdefaultmd)
+[`Complex`](#classesComplexmd)
 
 ##### Defined in
 
-[Complex.ts:203](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L203)
+[Complex.ts:203](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L203)
 
 ___
 
@@ -389,7 +389,7 @@ Returns the argument $\arg(a + bi) = \operatorname{atan2}(b, a)$.
 
 | Name | Type |
 | :------ | :------ |
-| `z` | [`default`](#classesdefaultmd) |
+| `z` | [`Complex`](#classesComplexmd) |
 
 ##### Returns
 
@@ -397,13 +397,13 @@ Returns the argument $\arg(a + bi) = \operatorname{atan2}(b, a)$.
 
 ##### Defined in
 
-[Complex.ts:58](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L58)
+[Complex.ts:58](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L58)
 
 ___
 
 #### asin
 
-`Static` **asin**(`z`): [`default`](#classesdefaultmd)
+`Static` **asin**(`z`): [`Complex`](#classesComplexmd)
 
 Inverse sine.  $\arcsin(z) = -i \ln \left( \sqrt{1 - z^2} + iz \right)$.
 
@@ -411,21 +411,21 @@ Inverse sine.  $\arcsin(z) = -i \ln \left( \sqrt{1 - z^2} + iz \right)$.
 
 | Name | Type |
 | :------ | :------ |
-| `z` | [`default`](#classesdefaultmd) |
+| `z` | [`Complex`](#classesComplexmd) |
 
 ##### Returns
 
-[`default`](#classesdefaultmd)
+[`Complex`](#classesComplexmd)
 
 ##### Defined in
 
-[Complex.ts:195](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L195)
+[Complex.ts:195](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L195)
 
 ___
 
 #### atan
 
-`Static` **atan**(`z`): [`default`](#classesdefaultmd)
+`Static` **atan**(`z`): [`Complex`](#classesComplexmd)
 
 Inverse tangent.  $\displaystyle \arctan(z) = -\frac{i}{2} \ln \left( \frac{i - z}{i + z} \right)$.
 
@@ -433,21 +433,21 @@ Inverse tangent.  $\displaystyle \arctan(z) = -\frac{i}{2} \ln \left( \frac{i - 
 
 | Name | Type |
 | :------ | :------ |
-| `z` | [`default`](#classesdefaultmd) |
+| `z` | [`Complex`](#classesComplexmd) |
 
 ##### Returns
 
-[`default`](#classesdefaultmd)
+[`Complex`](#classesComplexmd)
 
 ##### Defined in
 
-[Complex.ts:211](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L211)
+[Complex.ts:211](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L211)
 
 ___
 
 #### cos
 
-`Static` **cos**(`z`): [`default`](#classesdefaultmd)
+`Static` **cos**(`z`): [`Complex`](#classesComplexmd)
 
 Cosine.  $\cos(a + bi) = \cos(a) \cosh(b) - i \sin(a) \sinh(b)$.
 
@@ -455,21 +455,21 @@ Cosine.  $\cos(a + bi) = \cos(a) \cosh(b) - i \sin(a) \sinh(b)$.
 
 | Name | Type |
 | :------ | :------ |
-| `z` | [`default`](#classesdefaultmd) |
+| `z` | [`Complex`](#classesComplexmd) |
 
 ##### Returns
 
-[`default`](#classesdefaultmd)
+[`Complex`](#classesComplexmd)
 
 ##### Defined in
 
-[Complex.ts:172](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L172)
+[Complex.ts:172](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L172)
 
 ___
 
 #### exp
 
-`Static` **exp**(`z`): [`default`](#classesdefaultmd)
+`Static` **exp**(`z`): [`Complex`](#classesComplexmd)
 
 Exponential function.  $e^{a + bi} = e^a e^{bi}$.
 
@@ -477,21 +477,21 @@ Exponential function.  $e^{a + bi} = e^a e^{bi}$.
 
 | Name | Type |
 | :------ | :------ |
-| `z` | [`default`](#classesdefaultmd) |
+| `z` | [`Complex`](#classesComplexmd) |
 
 ##### Returns
 
-[`default`](#classesdefaultmd)
+[`Complex`](#classesComplexmd)
 
 ##### Defined in
 
-[Complex.ts:141](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L141)
+[Complex.ts:141](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L141)
 
 ___
 
 #### fromPolar
 
-`Static` **fromPolar**(`abs?`, `arg?`): [`default`](#classesdefaultmd)
+`Static` **fromPolar**(`abs?`, `arg?`): [`Complex`](#classesComplexmd)
 
 Creates a complex number in polar form.
 
@@ -504,17 +504,17 @@ Creates a complex number in polar form.
 
 ##### Returns
 
-[`default`](#classesdefaultmd)
+[`Complex`](#classesComplexmd)
 
 ##### Defined in
 
-[Complex.ts:44](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L44)
+[Complex.ts:44](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L44)
 
 ___
 
 #### log
 
-`Static` **log**(`z`): [`default`](#classesdefaultmd)
+`Static` **log**(`z`): [`Complex`](#classesComplexmd)
 
 Logarithm.  $\ln(re^{i\theta}) = \ln(r) + i\theta$.
 
@@ -522,21 +522,21 @@ Logarithm.  $\ln(re^{i\theta}) = \ln(r) + i\theta$.
 
 | Name | Type |
 | :------ | :------ |
-| `z` | [`default`](#classesdefaultmd) |
+| `z` | [`Complex`](#classesComplexmd) |
 
 ##### Returns
 
-[`default`](#classesdefaultmd)
+[`Complex`](#classesComplexmd)
 
 ##### Defined in
 
-[Complex.ts:148](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L148)
+[Complex.ts:148](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L148)
 
 ___
 
 #### pow
 
-`Static` **pow**(`z`, `w`): [`default`](#classesdefaultmd)
+`Static` **pow**(`z`, `w`): [`Complex`](#classesComplexmd)
 
 Exponentiation.  $z^w = e^{w \ln(z)}$.
 
@@ -544,22 +544,22 @@ Exponentiation.  $z^w = e^{w \ln(z)}$.
 
 | Name | Type |
 | :------ | :------ |
-| `z` | [`default`](#classesdefaultmd) |
-| `w` | [`default`](#classesdefaultmd) |
+| `z` | [`Complex`](#classesComplexmd) |
+| `w` | [`Complex`](#classesComplexmd) |
 
 ##### Returns
 
-[`default`](#classesdefaultmd)
+[`Complex`](#classesComplexmd)
 
 ##### Defined in
 
-[Complex.ts:155](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L155)
+[Complex.ts:155](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L155)
 
 ___
 
 #### sin
 
-`Static` **sin**(`z`): [`default`](#classesdefaultmd)
+`Static` **sin**(`z`): [`Complex`](#classesComplexmd)
 
 Sine.  $\sin(a + bi) = \sin(a) \cosh(b) + i \cos(a) \sinh(b)$.
 
@@ -567,21 +567,21 @@ Sine.  $\sin(a + bi) = \sin(a) \cosh(b) + i \cos(a) \sinh(b)$.
 
 | Name | Type |
 | :------ | :------ |
-| `z` | [`default`](#classesdefaultmd) |
+| `z` | [`Complex`](#classesComplexmd) |
 
 ##### Returns
 
-[`default`](#classesdefaultmd)
+[`Complex`](#classesComplexmd)
 
 ##### Defined in
 
-[Complex.ts:162](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L162)
+[Complex.ts:162](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L162)
 
 ___
 
 #### sqrt
 
-`Static` **sqrt**(`z`): [`default`](#classesdefaultmd)
+`Static` **sqrt**(`z`): [`Complex`](#classesComplexmd)
 
 Returns the square root $\sqrt{re^{i\theta}} = \sqrt{r} e^{i\theta/2}$.
 
@@ -589,21 +589,21 @@ Returns the square root $\sqrt{re^{i\theta}} = \sqrt{r} e^{i\theta/2}$.
 
 | Name | Type |
 | :------ | :------ |
-| `z` | [`default`](#classesdefaultmd) |
+| `z` | [`Complex`](#classesComplexmd) |
 
 ##### Returns
 
-[`default`](#classesdefaultmd)
+[`Complex`](#classesComplexmd)
 
 ##### Defined in
 
-[Complex.ts:134](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L134)
+[Complex.ts:134](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L134)
 
 ___
 
 #### tan
 
-`Static` **tan**(`z`): [`default`](#classesdefaultmd)
+`Static` **tan**(`z`): [`Complex`](#classesComplexmd)
 
 Tangent.  $\displaystyle \tan(a + bi) = \frac{\sin(2a) + i \sinh(2b)}{\cos(2a) + \cosh(2b)}$.
 
@@ -611,15 +611,15 @@ Tangent.  $\displaystyle \tan(a + bi) = \frac{\sin(2a) + i \sinh(2b)}{\cos(2a) +
 
 | Name | Type |
 | :------ | :------ |
-| `z` | [`default`](#classesdefaultmd) |
+| `z` | [`Complex`](#classesComplexmd) |
 
 ##### Returns
 
-[`default`](#classesdefaultmd)
+[`Complex`](#classesComplexmd)
 
 ##### Defined in
 
-[Complex.ts:182](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L182)
+[Complex.ts:182](https://github.com/konnosoft/complexts/blob/12b2d4c/lib/Complex.ts#L182)
 
 
 <a name="modulesmd"></a>
@@ -630,4 +630,4 @@ Tangent.  $\displaystyle \tan(a + bi) = \frac{\sin(2a) + i \sinh(2b)}{\cos(2a) +
 
 ### Classes
 
-- [default](#classesdefaultmd)
+- [Complex](#classesComplexmd)

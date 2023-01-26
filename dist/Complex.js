@@ -70,7 +70,7 @@ var Complex = /** @class */ (function () {
         // );
     };
     /**
-     * Division.  $\frac{a + bi}{c + di} = \frac{(ac + bd) + (bc - ad)i}{c^2 + d^2}$.
+     * Division.  $\displaystyle \frac{a + bi}{c + di} = \frac{(ac + bd) + (bc - ad)i}{c^2 + d^2}$.
      */
     Complex.prototype.div = function (other) {
         var denominator = Math.pow(other.real, 2) + Math.pow(other.imag, 2);

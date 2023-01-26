@@ -119,7 +119,7 @@ Returns **[Complex][1]**&#x20;
 
 ### div
 
-Division.  $\frac{a + bi}{c + di} = \frac{(ac + bd) + (bc - ad)i}{c^2 + d^2}$.
+Division.  $\displaystyle \frac{a + bi}{c + di} = \frac{(ac + bd) + (bc - ad)i}{c^2 + d^2}$.
 
 #### Parameters
 

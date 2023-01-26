@@ -94,7 +94,7 @@ export default class Complex {
   }
 
   /**
-   * Division.  $\frac{a + bi}{c + di} = \frac{(ac + bd) + (bc - ad)i}{c^2 + d^2}$.
+   * Division.  $\displaystyle \frac{a + bi}{c + di} = \frac{(ac + bd) + (bc - ad)i}{c^2 + d^2}$.
    */
   div(other: Complex): Complex {
     const denominator = other.real ** 2 + other.imag ** 2;

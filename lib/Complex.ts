@@ -182,7 +182,7 @@ export default class Complex {
   }
 
   /**
-   * Tangent.  $\tan(a + bi) = \frac{\sin(2a) + i \sinh(2b)}{\cos(2a) + \cosh(2b)}$.
+   * Tangent.  $\displaystyle \tan(a + bi) = \frac{\sin(2a) + i \sinh(2b)}{\cos(2a) + \cosh(2b)}$.
    */
   static tan(z: Complex): Complex {
     const twoReal = 2 * z.real;
@@ -211,7 +211,7 @@ export default class Complex {
   }
 
   /**
-   * Inverse tangent.  $\arctan(z) = -\frac{i}{2} \ln \left( \frac{i - z}{i + z} \right)$.
+   * Inverse tangent.  $\displaystyle \arctan(z) = -\frac{i}{2} \ln \left( \frac{i - z}{i + z} \right)$.
    */
   static atan(z: Complex): Complex {
     return Complex.I.neg()

@@ -137,7 +137,7 @@ var Complex = /** @class */ (function () {
         return new Complex(Math.cos(z.real) * Math.cosh(z.imag), -Math.sin(z.real) * Math.sinh(z.imag));
     };
     /**
-     * Tangent.  $\tan(a + bi) = \frac{\sin(2a) + i \sinh(2b)}{\cos(2a) + \cosh(2b)}$.
+     * Tangent.  $\displaystyle \tan(a + bi) = \frac{\sin(2a) + i \sinh(2b)}{\cos(2a) + \cosh(2b)}$.
      */
     Complex.tan = function (z) {
         var twoReal = 2 * z.real;
@@ -160,7 +160,7 @@ var Complex = /** @class */ (function () {
         return Complex.I.neg().mul(Complex.log(Complex.I.mul(sqrt1z).add(z)));
     };
     /**
-     * Inverse tangent.  $\arctan(z) = -\frac{i}{2} \ln \left( \frac{i - z}{i + z} \right)$.
+     * Inverse tangent.  $\displaystyle \arctan(z) = -\frac{i}{2} \ln \left( \frac{i - z}{i + z} \right)$.
      */
     Complex.atan = function (z) {
         return Complex.I.neg()

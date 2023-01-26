@@ -265,7 +265,7 @@ Returns **[Complex][1]**&#x20;
 
 ### tan
 
-Tangent.  $\tan(a + bi) = \frac{\sin(2a) + i \sinh(2b)}{\cos(2a) + \cosh(2b)}$.
+Tangent.  $\displaystyle \tan(a + bi) = \frac{\sin(2a) + i \sinh(2b)}{\cos(2a) + \cosh(2b)}$.
 
 #### Parameters
 
@@ -295,7 +295,7 @@ Returns **[Complex][1]**&#x20;
 
 ### atan
 
-Inverse tangent.  $\arctan(z) = -\frac{i}{2} \ln \left( \frac{i - z}{i + z} \right)$.
+Inverse tangent.  $\displaystyle \arctan(z) = -\frac{i}{2} \ln \left( \frac{i - z}{i + z} \right)$.
 
 #### Parameters
 

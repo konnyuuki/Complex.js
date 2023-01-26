@@ -6,10 +6,10 @@ exports.__esModule = true;
  * intended for educational purposes to learn how it can be implemented or what
  * [complex numbers](https://en.wikipedia.org/wiki/Complex_number) are.
  *
- * Complex numbers have two forms: Cartesian $z = x + iy$ and polar $z =
- * re^{i\theta}$.  We use the former as an internal representation, storing the
- * real and imaginary parts as JavaScript numbers (i.e., 64-bit floating point
- * numbers).
+ * Complex numbers have two forms: Cartesian $z = x + iy$ and polar
+ * $z=re^{i\theta}$.  We use the former as an internal representation, storing
+ * the real and imaginary parts as JavaScript numbers (i.e., 64-bit floating
+ * point numbers).
  *
  * @property real Real part.
  * @property imag Imaginary part.

@@ -47,9 +47,9 @@
 
 ## Complex
 
-This is a TypeScript implementation of a [complex data
-type][43].  It is for
-educational purposes on how it is implemented or what [complex
+This is an implementation of a [complex data
+type][43] in TypeScript.  It is
+for educational purposes on how it is implemented or what [complex
 numbers][44] are.
 
 Complex numbers have two representations: rectangular and polar forms.  We

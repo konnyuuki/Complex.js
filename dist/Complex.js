@@ -13,7 +13,7 @@ exports.__esModule = true;
  *
  * We define arithmetic operations and a `Complex` version of the static methods
  * of `Math` as specified in ES3.  That is, $e^{i\pi}$ becomes
- * `Complex.exp(Complex.I.mul(Complex.PI))` instead of
+ * `Complex.exp(Complex.I.mul(Math.PI))` instead of
  * `Complex.I.mul(Math.PI).exp()`.  We made this choice because it is more
  * readable than the latter.
  */

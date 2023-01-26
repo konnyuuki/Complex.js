@@ -48,9 +48,9 @@
 ## Complex
 
 This is an implementation of a [complex data
-type][43] in TypeScript.  It is
-for educational purposes on how it is implemented or what [complex
-numbers][44] are.
+type][43] in TypeScript.  It was
+created for educational purposes to show how it is implemented or what
+[complex numbers][44] are.
 
 Complex numbers have two representations: rectangular and polar forms.  We
 use the former internally to keep the real and imaginary parts in JavaScript

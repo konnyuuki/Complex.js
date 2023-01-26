@@ -4,9 +4,9 @@
  * intended for educational purposes to learn how it can be implemented or what
  * [complex numbers](https://en.wikipedia.org/wiki/Complex_number) are.
  *
- * Complex numbers have two representations: rectangular and polar forms.  We
- * use the former internally to keep the real and imaginary parts in JavaScript
- * numbers (i.e., 64-bit floating-point numbers).
+ * Complex numbers have two forms: Cartesian (rectangular) a + bi and polar
+ * re^it.  We use the former internally to keep the real and imaginary parts in
+ * JavaScript numbers (i.e., 64-bit floating-point numbers).
  *
  * @property real Real part.
  * @property imag Imaginary part.

@@ -141,7 +141,7 @@ Returns **[Complex][1]**&#x20;
 
 ### equals
 
-Equality.  $a + bi = c + di \iff a = c \text{ and } b = d$.
+Equality.  $a + bi = c + di \iff a = c \wedge b = d$.
 
 #### Parameters
 

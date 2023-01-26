@@ -95,7 +95,7 @@ var Complex = /** @class */ (function () {
         return new Complex(this.real, -this.imag);
     };
     /**
-     * Equality.  $a + bi = c + di \iff a = c \text{ and } b = d$.
+     * Equality.  $a + bi = c + di \iff a = c \wedge b = d$.
      */
     Complex.prototype.equals = function (other) {
         return this.real === other.real && this.imag === other.imag;

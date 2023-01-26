@@ -152,7 +152,7 @@ Returns **[boolean][51]**&#x20;
 
 ### toString
 
-String representation in rectangular form.
+String representation in Cartesian form.
 
 Returns **[string][52]**&#x20;
 

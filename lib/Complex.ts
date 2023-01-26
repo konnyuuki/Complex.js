@@ -34,7 +34,7 @@ export default class Complex {
   /** Two, as a complex number. */
   static TWO: Complex = new Complex(2, 0);
 
-  /** Creates a complex number in rectangular form. */
+  /** Creates a complex number in Cartesian form. */
   constructor(real: number = 0, imag: number = 0) {
     this.real = real;
     this.imag = imag;
@@ -214,7 +214,7 @@ export default class Complex {
       .mul(Complex.log(Complex.I.sub(z).div(Complex.I.add(z))));
   }
 
-  /** String representation in rectangular form. */
+  /** String representation in Cartesian form. */
   toString(): string {
     // Real.
     if (this.imag === 0) {

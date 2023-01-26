@@ -18,7 +18,7 @@ exports.__esModule = true;
  * $e^{i\pi}$ becomes `Complex.exp(Complex.I.mul(Math.PI))`.
  */
 var Complex = /** @class */ (function () {
-    /** Creates a complex number in rectangular form. */
+    /** Creates a complex number in Cartesian form. */
     function Complex(real, imag) {
         if (real === void 0) { real = 0; }
         if (imag === void 0) { imag = 0; }
@@ -164,7 +164,7 @@ var Complex = /** @class */ (function () {
             .div(Complex.TWO)
             .mul(Complex.log(Complex.I.sub(z).div(Complex.I.add(z))));
     };
-    /** String representation in rectangular form. */
+    /** String representation in Cartesian form. */
     Complex.prototype.toString = function () {
         // Real.
         if (this.imag === 0) {

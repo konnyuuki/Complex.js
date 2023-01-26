@@ -1,9 +1,5 @@
-[Documentation](README.md) / Exports
-
 # Documentation
 
-## Table of contents
-
-### Classes
+## Classes
 
 - [default](classes/default.md)

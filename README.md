@@ -98,7 +98,7 @@ Creates a complex number in Cartesian form.
 
 ##### Defined in
 
-[Complex.ts:38](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L38)
+[Complex.ts:38](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L38)
 
 ### Properties
 
@@ -110,7 +110,7 @@ Imaginary part.
 
 ##### Defined in
 
-[Complex.ts:23](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L23)
+[Complex.ts:23](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L23)
 
 ___
 
@@ -122,7 +122,7 @@ Real part.
 
 ##### Defined in
 
-[Complex.ts:20](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L20)
+[Complex.ts:20](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L20)
 
 ___
 
@@ -134,7 +134,7 @@ The imaginary unit.
 
 ##### Defined in
 
-[Complex.ts:26](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L26)
+[Complex.ts:26](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L26)
 
 ___
 
@@ -146,7 +146,7 @@ One, as a complex number.
 
 ##### Defined in
 
-[Complex.ts:32](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L32)
+[Complex.ts:32](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L32)
 
 ___
 
@@ -158,7 +158,7 @@ Two, as a complex number.
 
 ##### Defined in
 
-[Complex.ts:35](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L35)
+[Complex.ts:35](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L35)
 
 ___
 
@@ -170,7 +170,7 @@ Zero, as a complex number.
 
 ##### Defined in
 
-[Complex.ts:29](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L29)
+[Complex.ts:29](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L29)
 
 ### Methods
 
@@ -192,7 +192,7 @@ Addition.  $(a + bi) + (c + di) = (a + c) + (b + d)i$.
 
 ##### Defined in
 
-[Complex.ts:65](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L65)
+[Complex.ts:65](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L65)
 
 ___
 
@@ -208,7 +208,7 @@ Returns the complex conjugate $\overline{a + bi} = a - bi$.
 
 ##### Defined in
 
-[Complex.ts:120](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L120)
+[Complex.ts:120](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L120)
 
 ___
 
@@ -232,7 +232,7 @@ $\displaystyle \frac{r_1 e^{i\theta_1}}{r_2 e^{i\theta_2}} = \frac{r_1}{r_2} e^{
 
 ##### Defined in
 
-[Complex.ts:97](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L97)
+[Complex.ts:97](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L97)
 
 ___
 
@@ -254,7 +254,7 @@ Equality.  $a + bi = c + di \iff a = c \wedge b = d$.
 
 ##### Defined in
 
-[Complex.ts:127](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L127)
+[Complex.ts:127](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L127)
 
 ___
 
@@ -277,7 +277,7 @@ also be written in polar form: $r_1 e^{i\theta_1} r_2 e^{i\theta_2} = r_1 r_2 e^
 
 ##### Defined in
 
-[Complex.ts:80](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L80)
+[Complex.ts:80](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L80)
 
 ___
 
@@ -293,7 +293,7 @@ Returns the additive inverse $-(a + bi) = -a - bi$.
 
 ##### Defined in
 
-[Complex.ts:113](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L113)
+[Complex.ts:113](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L113)
 
 ___
 
@@ -315,7 +315,7 @@ Subtraction.  $(a + bi) - (c + di) = (a - c) + (b - d)i$.
 
 ##### Defined in
 
-[Complex.ts:72](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L72)
+[Complex.ts:72](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L72)
 
 ___
 
@@ -331,7 +331,7 @@ String representation in Cartesian form.
 
 ##### Defined in
 
-[Complex.ts:218](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L218)
+[Complex.ts:218](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L218)
 
 ___
 
@@ -353,7 +353,7 @@ Returns the absolute value $|a + bi| = \sqrt{a^2 + b^2}$.
 
 ##### Defined in
 
-[Complex.ts:51](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L51)
+[Complex.ts:51](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L51)
 
 ___
 
@@ -375,7 +375,7 @@ Inverse cosine.  $\arccos(z) = -i \ln \left( i \sqrt{1 - z^2} + z \right)$.
 
 ##### Defined in
 
-[Complex.ts:203](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L203)
+[Complex.ts:203](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L203)
 
 ___
 
@@ -397,7 +397,7 @@ Returns the argument $\arg(a + bi) = \operatorname{atan2}(b, a)$.
 
 ##### Defined in
 
-[Complex.ts:58](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L58)
+[Complex.ts:58](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L58)
 
 ___
 
@@ -419,7 +419,7 @@ Inverse sine.  $\arcsin(z) = -i \ln \left( \sqrt{1 - z^2} + iz \right)$.
 
 ##### Defined in
 
-[Complex.ts:195](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L195)
+[Complex.ts:195](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L195)
 
 ___
 
@@ -441,7 +441,7 @@ Inverse tangent.  $\displaystyle \arctan(z) = -\frac{i}{2} \ln \left( \frac{i - 
 
 ##### Defined in
 
-[Complex.ts:211](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L211)
+[Complex.ts:211](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L211)
 
 ___
 
@@ -463,7 +463,7 @@ Cosine.  $\cos(a + bi) = \cos(a) \cosh(b) - i \sin(a) \sinh(b)$.
 
 ##### Defined in
 
-[Complex.ts:172](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L172)
+[Complex.ts:172](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L172)
 
 ___
 
@@ -485,7 +485,7 @@ Exponential function.  $e^{a + bi} = e^a e^{bi}$.
 
 ##### Defined in
 
-[Complex.ts:141](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L141)
+[Complex.ts:141](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L141)
 
 ___
 
@@ -508,7 +508,7 @@ Creates a complex number in polar form.
 
 ##### Defined in
 
-[Complex.ts:44](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L44)
+[Complex.ts:44](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L44)
 
 ___
 
@@ -530,7 +530,7 @@ Logarithm.  $\ln(re^{i\theta}) = \ln(r) + i\theta$.
 
 ##### Defined in
 
-[Complex.ts:148](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L148)
+[Complex.ts:148](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L148)
 
 ___
 
@@ -553,7 +553,7 @@ Exponentiation.  $z^w = e^{w \ln(z)}$.
 
 ##### Defined in
 
-[Complex.ts:155](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L155)
+[Complex.ts:155](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L155)
 
 ___
 
@@ -575,7 +575,7 @@ Sine.  $\sin(a + bi) = \sin(a) \cosh(b) + i \cos(a) \sinh(b)$.
 
 ##### Defined in
 
-[Complex.ts:162](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L162)
+[Complex.ts:162](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L162)
 
 ___
 
@@ -597,7 +597,7 @@ Returns the square root $\sqrt{re^{i\theta}} = \sqrt{r} e^{i\theta/2}$.
 
 ##### Defined in
 
-[Complex.ts:134](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L134)
+[Complex.ts:134](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L134)
 
 ___
 
@@ -619,7 +619,7 @@ Tangent.  $\displaystyle \tan(a + bi) = \frac{\sin(2a) + i \sinh(2b)}{\cos(2a) +
 
 ##### Defined in
 
-[Complex.ts:182](https://github.com/konnosoft/complexts/blob/64a4124/lib/Complex.ts#L182)
+[Complex.ts:182](https://github.com/konnosoft/complexts/blob/c4b78e3/lib/Complex.ts#L182)
 
 
 <a name="modulesmd"></a>

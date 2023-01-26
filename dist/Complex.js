@@ -203,8 +203,11 @@ var Complex = /** @class */ (function () {
     };
     /** The imaginary unit. */
     Complex.I = new Complex(0, 1);
+    /** Zero, as a complex number. */
     Complex.ZERO = new Complex(0, 0);
+    /** One, as a complex number. */
     Complex.ONE = new Complex(1, 0);
+    /** Two, as a complex number. */
     Complex.TWO = new Complex(2, 0);
     return Complex;
 }());

@@ -19,8 +19,13 @@ export default class Complex {
   /** The imaginary unit. */
   static I: Complex = new Complex(0, 1);
 
+  /** Zero, as a complex number. */
   static ZERO: Complex = new Complex(0, 0);
+
+  /** One, as a complex number. */
   static ONE: Complex = new Complex(1, 0);
+
+  /** Two, as a complex number. */
   static TWO: Complex = new Complex(2, 0);
 
   /** Creates a complex number in rectangular form. */

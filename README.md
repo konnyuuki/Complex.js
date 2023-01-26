@@ -20,39 +20,42 @@
         *   [Parameters][16]
     *   [toString][17]
     *   [I][18]
-    *   [fromPolar][19]
-        *   [Parameters][20]
-    *   [abs][21]
-        *   [Parameters][22]
-    *   [arg][23]
-        *   [Parameters][24]
-    *   [sqrt][25]
-        *   [Parameters][26]
-    *   [exp][27]
-        *   [Parameters][28]
-    *   [log][29]
-        *   [Parameters][30]
-    *   [pow][31]
-        *   [Parameters][32]
-    *   [sin][33]
-        *   [Parameters][34]
-    *   [cos][35]
-        *   [Parameters][36]
-    *   [tan][37]
-        *   [Parameters][38]
-    *   [asin][39]
-        *   [Parameters][40]
-    *   [acos][41]
-        *   [Parameters][42]
-    *   [atan][43]
-        *   [Parameters][44]
+    *   [ZERO][19]
+    *   [ONE][20]
+    *   [TWO][21]
+    *   [fromPolar][22]
+        *   [Parameters][23]
+    *   [abs][24]
+        *   [Parameters][25]
+    *   [arg][26]
+        *   [Parameters][27]
+    *   [sqrt][28]
+        *   [Parameters][29]
+    *   [exp][30]
+        *   [Parameters][31]
+    *   [log][32]
+        *   [Parameters][33]
+    *   [pow][34]
+        *   [Parameters][35]
+    *   [sin][36]
+        *   [Parameters][37]
+    *   [cos][38]
+        *   [Parameters][39]
+    *   [tan][40]
+        *   [Parameters][41]
+    *   [asin][42]
+        *   [Parameters][43]
+    *   [acos][44]
+        *   [Parameters][45]
+    *   [atan][46]
+        *   [Parameters][47]
 
 ## Complex
 
 This is an implementation of a [complex data
-type][45] in TypeScript.  It is
+type][48] in TypeScript.  It is
 intended for educational purposes to learn how it can be implemented or what
-[complex numbers][46] are.
+[complex numbers][49] are.
 
 Complex numbers have two forms: Cartesian $z = x + iy$ and polar
 $z = re^{i\theta}$.  We use the former as an internal representation,
@@ -61,20 +64,20 @@ floating point numbers).
 
 ### Parameters
 
-*   `real` **[number][47]**  (optional, default `0`)
-*   `imag` **[number][47]**  (optional, default `0`)
+*   `real` **[number][50]**  (optional, default `0`)
+*   `imag` **[number][50]**  (optional, default `0`)
 
 ### real
 
 Real part.
 
-Type: [number][47]
+Type: [number][50]
 
 ### imag
 
 Imaginary part.
 
-Type: [number][47]
+Type: [number][50]
 
 ### add
 
@@ -143,17 +146,29 @@ a + bi = c + di iff a = c and b = d.
 
 *   `other` **[Complex][1]**&#x20;
 
-Returns **[boolean][48]**&#x20;
+Returns **[boolean][51]**&#x20;
 
 ### toString
 
 String representation in rectangular form.
 
-Returns **[string][49]**&#x20;
+Returns **[string][52]**&#x20;
 
 ### I
 
 The imaginary unit.
+
+### ZERO
+
+Zero, as a complex number.
+
+### ONE
+
+One, as a complex number.
+
+### TWO
+
+Two, as a complex number.
 
 ### fromPolar
 
@@ -161,8 +176,8 @@ Creates a complex number in polar form.
 
 #### Parameters
 
-*   `abs` **[number][47]**  (optional, default `0`)
-*   `arg` **[number][47]**  (optional, default `0`)
+*   `abs` **[number][50]**  (optional, default `0`)
+*   `arg` **[number][50]**  (optional, default `0`)
 
 Returns **[Complex][1]**&#x20;
 
@@ -175,7 +190,7 @@ Absolute value.
 
 *   `z` **[Complex][1]**&#x20;
 
-Returns **[number][47]**&#x20;
+Returns **[number][50]**&#x20;
 
 ### arg
 
@@ -186,7 +201,7 @@ arg(a + bi) = atan2(b, a).
 
 *   `z` **[Complex][1]**&#x20;
 
-Returns **[number][47]**&#x20;
+Returns **[number][50]**&#x20;
 
 ### sqrt
 
@@ -335,64 +350,70 @@ Returns **[Complex][1]**&#x20;
 
 [18]: #i
 
-[19]: #frompolar
+[19]: #zero
 
-[20]: #parameters-6
+[20]: #one
 
-[21]: #abs
+[21]: #two
 
-[22]: #parameters-7
+[22]: #frompolar
 
-[23]: #arg
+[23]: #parameters-6
 
-[24]: #parameters-8
+[24]: #abs
 
-[25]: #sqrt
+[25]: #parameters-7
 
-[26]: #parameters-9
+[26]: #arg
 
-[27]: #exp
+[27]: #parameters-8
 
-[28]: #parameters-10
+[28]: #sqrt
 
-[29]: #log
+[29]: #parameters-9
 
-[30]: #parameters-11
+[30]: #exp
 
-[31]: #pow
+[31]: #parameters-10
 
-[32]: #parameters-12
+[32]: #log
 
-[33]: #sin
+[33]: #parameters-11
 
-[34]: #parameters-13
+[34]: #pow
 
-[35]: #cos
+[35]: #parameters-12
 
-[36]: #parameters-14
+[36]: #sin
 
-[37]: #tan
+[37]: #parameters-13
 
-[38]: #parameters-15
+[38]: #cos
 
-[39]: #asin
+[39]: #parameters-14
 
-[40]: #parameters-16
+[40]: #tan
 
-[41]: #acos
+[41]: #parameters-15
 
-[42]: #parameters-17
+[42]: #asin
 
-[43]: #atan
+[43]: #parameters-16
 
-[44]: #parameters-18
+[44]: #acos
 
-[45]: https://en.wikipedia.org/wiki/Complex_data_type
+[45]: #parameters-17
 
-[46]: https://en.wikipedia.org/wiki/Complex_number
+[46]: #atan
 
-[47]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+[47]: #parameters-18
 
-[48]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+[48]: https://en.wikipedia.org/wiki/Complex_data_type
 
-[49]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String
+[49]: https://en.wikipedia.org/wiki/Complex_number
+
+[50]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number
+
+[51]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean
+
+[52]: https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String

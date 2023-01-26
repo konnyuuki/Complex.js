@@ -9,6 +9,10 @@ exports.__esModule = true;
  * numbers](https://en.wikipedia.org/wiki/Complex_number) are, and is not
  * intended for practical use.
  *
+ * There are two types of representations of complex numbers: rectangular and
+ * polar forms.  We use the former internally to keep the real and imaginary
+ * parts in JavaScript numbers (i.e., 64-bit floating-point numbers).
+ *
  * @property real Real part.
  * @property imag Imaginary part.
  */

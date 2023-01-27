@@ -13,7 +13,11 @@ export default class Complex {
   static ONE: Complex = new Complex(1, 0);
   static TWO: Complex = new Complex(2, 0);
 
-  /** Creates a complex number in Cartesian form. */
+  /**
+   * Creates a complex number in Cartesian form.
+   * @param real Real part.
+   * @param imag Imaginary part.
+   */
   constructor(real: number = 0, imag: number = 0) {
     this.real = real;
     this.imag = imag;

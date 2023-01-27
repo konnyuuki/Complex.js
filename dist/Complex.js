@@ -2,12 +2,11 @@
 exports.__esModule = true;
 /**
  * A complex number class.
+ * @class Complex
  */
 var Complex = /** @class */ (function () {
     /**
      * Creates a complex number in Cartesian form.
-     * @param {number} real Real part.
-     * @param {number} imag Imaginary part.
      */
     function Complex(real, imag) {
         if (real === void 0) { real = 0; }

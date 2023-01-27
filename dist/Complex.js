@@ -6,8 +6,8 @@ exports.__esModule = true;
 var Complex = /** @class */ (function () {
     /**
      * Creates a complex number in Cartesian form.
-     * @param real Real part.
-     * @param imag Imaginary part.
+     * @param {number} real Real part.
+     * @param {number} imag Imaginary part.
      */
     function Complex(real, imag) {
         if (real === void 0) { real = 0; }

@@ -15,8 +15,8 @@ export default class Complex {
 
   /**
    * Creates a complex number in Cartesian form.
-   * @param real Real part.
-   * @param imag Imaginary part.
+   * @param {number} real Real part.
+   * @param {number} imag Imaginary part.
    */
   constructor(real: number = 0, imag: number = 0) {
     this.real = real;

@@ -1,3 +1,6 @@
+/**
+ * A complex number class.
+ */
 export default class Complex {
   real: number;
   imag: number;

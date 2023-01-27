@@ -2,7 +2,10 @@
  * A complex number class.
  */
 export default class Complex {
+  /** Real part. */
   real: number;
+
+  /** Imaginary part. */
   imag: number;
 
   static I: Complex = new Complex(0, 1);
@@ -10,11 +13,13 @@ export default class Complex {
   static ONE: Complex = new Complex(1, 0);
   static TWO: Complex = new Complex(2, 0);
 
+  /** Creates a complex number in Cartesian form. */
   constructor(real: number = 0, imag: number = 0) {
     this.real = real;
     this.imag = imag;
   }
 
+  /** Creates a complex number in polar form. */
   static fromPolar(abs: number = 0, arg: number = 0): Complex {
     return new Complex(abs * Math.cos(arg), abs * Math.sin(arg));
   }
@@ -27,6 +32,7 @@ export default class Complex {
     return Math.atan2(z.imag, z.real);
   }
 
+  /** Addition.  $(a + bi) + (c + di) = (a + c) + (b + d)i.$ */
   add(other: Complex): Complex {
     return new Complex(this.real + other.real, this.imag + other.imag);
   }

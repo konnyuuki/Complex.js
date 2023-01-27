@@ -4,12 +4,14 @@ exports.__esModule = true;
  * A complex number class.
  */
 var Complex = /** @class */ (function () {
+    /** Creates a complex number in Cartesian form. */
     function Complex(real, imag) {
         if (real === void 0) { real = 0; }
         if (imag === void 0) { imag = 0; }
         this.real = real;
         this.imag = imag;
     }
+    /** Creates a complex number in polar form. */
     Complex.fromPolar = function (abs, arg) {
         if (abs === void 0) { abs = 0; }
         if (arg === void 0) { arg = 0; }
@@ -21,6 +23,7 @@ var Complex = /** @class */ (function () {
     Complex.arg = function (z) {
         return Math.atan2(z.imag, z.real);
     };
+    /** Addition.  $(a + bi) + (c + di) = (a + c) + (b + d)i.$ */
     Complex.prototype.add = function (other) {
         return new Complex(this.real + other.real, this.imag + other.imag);
     };

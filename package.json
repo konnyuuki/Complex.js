@@ -1,5 +1,30 @@
 {
+  "name": "complex",
+  "version": "0.1.0",
+  "description": "",
+  "private": true,
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/konnosoft/complexts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/konnosoft/complexts/issues"
+  },
+  "homepage": "https://github.com/konnosoft/complexts#readme",
   "devDependencies": {
-    "@babel/preset-env": "^7.20.2"
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
   }
 }

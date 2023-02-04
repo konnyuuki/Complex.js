@@ -6,5 +6,10 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'Complex.js',
+    library: {
+      name: 'Complex',
+      type: 'umd',
+      export: 'default',
+    },
   },
 };

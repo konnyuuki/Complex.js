@@ -1,3 +1,5 @@
+
+
 const path = require('path');
 
 module.exports = {
@@ -11,5 +13,9 @@ module.exports = {
       type: 'umd',
       export: 'default',
     },
+    globalObject: 'this',
   },
 };
+
+
+

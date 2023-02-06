@@ -1,10 +1,8 @@
-
-
 const path = require('path');
 
 module.exports = {
   mode: 'production',
-  entry: './src/Complex.js',
+  entry: './src/Complex.mjs',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'Complex.js',
@@ -16,6 +14,3 @@ module.exports = {
     globalObject: 'this',
   },
 };
-
-
-

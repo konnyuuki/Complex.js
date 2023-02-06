@@ -1,3 +1,3 @@
 const Complex = require('../dist/Complex');
 
-console.log(new Complex(3, 4).utils.answer());
+console.log(new Complex(3, 4));

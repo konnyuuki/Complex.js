@@ -1,0 +1,1 @@
+!function(e,t){"object"==typeof exports&&"object"==typeof module?module.exports=t():"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?exports.Complex=t():e.Complex=t()}(this,(()=>(()=>{"use strict";var e,t={};return e=function(e,t){void 0===e&&(e=0),void 0===t&&(t=0),this.real=e,this.imag=t},t.default=e,t.default})()));

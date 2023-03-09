@@ -45,10 +45,10 @@ export default class Complex {
   }
 
   /**
-   * Returns the sum $(\mathrm{this} + \mathrm{other})$ of itself and the given
-   * complex number.
+   * Returns the sum of itself and the given complex number.
    *
-   * Cartesian: $$(a + bi) + (c + di) = (a + c) + (b + d)i.$$
+   * Formula:
+   * $$(a + bi) + (c + di) = (a + c) + (b + d)i.$$
    */
   add(other: Complex | number) {
     if (!(other instanceof Complex)) {
@@ -59,10 +59,10 @@ export default class Complex {
   }
 
   /**
-   * Returns the difference $(\mathrm{this} - \mathrm{other})$ of itself and the
-   * given complex number.
+   * Returns the difference of itself and the given complex number.
    *
-   * Cartesian: $$(a + bi) - (c + di) = (a - c) + (b - d)i.$$
+   * Formula:
+   * $$(a + bi) - (c + di) = (a - c) + (b - d)i.$$
    */
   sub(other: Complex | number) {
     if (!(other instanceof Complex)) {
@@ -73,12 +73,14 @@ export default class Complex {
   }
 
   /**
-   * Returns the product $(\mathrm{this} \cdot \mathrm{other})$ of itself and the
-   * given complex number.
+   * Returns the product of itself and the given complex number.
    *
-   * Cartesian: $$(a + bi)(c + di) = (ac - bd) + (ad + bc)i.$$
+   * Formula:
+   * $$(a + bi)(c + di) = (ac - bd) + (ad + bc)i.$$
    *
-   * Polar: $$r_1 e^{i \theta_1} r_2 e^{i \theta_2} = r_1 r_2 e^{i(\theta_1 + \theta_2)}.$$
+   * It can also be expressed in polar form:
+   * $$r_1 e^{i \theta_1} r_2 e^{i \theta_2} = r_1 r_2 e^{i(\theta_1 +
+   * \theta_2)}.$$
    */
   mul(other: Complex | number) {
     if (!(other instanceof Complex)) {
@@ -89,15 +91,20 @@ export default class Complex {
       this.real * other.real - this.imag * other.imag,
       this.real * other.imag + this.imag * other.real,
     );
+
+    // 
   }
 
   /**
-   * Returns the quotient $\frac{\mathrm{this}}{\mathrm{other}}$ of itself and the
-   * given complex number.
+   * Returns the quotient of itself and the given complex number.
    *
-   * Cartesian: $$\frac{a + bi}{c + di} = \frac{ac + bc}{c^2 + d^2} + \frac{bc - ad}{c^2 + d^2}i.$$
+   * Formula:
+   * $$\frac{a + bi}{c + di} = \frac{ac + bc}{c^2 + d^2} + \frac{bc -
+   * ad}{c^2 + d^2}i.$$
    *
-   * Polar: $$\frac{r_1 e^{i \theta_1}}{r_2 e^{i \theta_2}} = \frac{r_1}{r_2} e^{i(\theta_1 - \theta_2)}.$$
+   * It can also be expressed in polar form:
+   * $$\frac{r_1 e^{i \theta_1}}{r_2 e^{i \theta_2}} = \frac{r_1}{r_2}
+   * e^{i(\theta_1 - \theta_2)}.$$
    */
   div(other: Complex | number) {
     if (!(other instanceof Complex)) {

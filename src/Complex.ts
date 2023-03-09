@@ -45,16 +45,15 @@ export default class Complex {
   }
 
   /**
-   * Returns a new complex number that is the sum of itself and the given
-   * complex number `(this + other)`.
+   * Returns the sum of itself and the given complex number `(this + other)`.
    */
   add(other: Complex) {
     return new Complex(this.real + other.real, this.imag + other.imag);
   }
 
   /**
-   * Returns a new complex number that is the difference of subtracting the
-   * given complex number from itself `(this - other)`.
+   * Returns the difference of subtracting the given complex number from itself
+   * `(this - other)`.
    */
   sub(other: Complex) {
     return new Complex(this.real - other.real, this.imag - other.imag);

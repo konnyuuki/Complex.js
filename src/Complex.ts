@@ -23,16 +23,16 @@
  */
 
 /**
- * A complex number.
+ * Represents a complex number.
  */
 export default class Complex {
   /**
-   * Real part.
+   * The real part.
    */
   real: number;
 
   /**
-   * Imaginary part.
+   * The imaginary part.
    */
   imag: number;
 
@@ -45,9 +45,7 @@ export default class Complex {
   }
 
   /**
-   * Adds two complex numbers.
-   * @param other Complex number to be added.
-   * @returns The sum of two complex numbers.
+   * Returns the sum of itself and the given complex number.
    */
   add(other: Complex) {
     return new Complex(this.real + other.real, this.imag + other.imag);

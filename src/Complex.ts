@@ -47,6 +47,8 @@ export default class Complex {
   /**
    * Returns the sum $(\mathrm{this} + \mathrm{other})$ of itself and the given
    * complex number.
+   *
+   * Formula: $(a + bi) + (c + di) = (a + c) + (b + d)i.$
    */
   add(other: Complex | number) {
     if (!(other instanceof Complex)) {
@@ -59,6 +61,8 @@ export default class Complex {
   /**
    * Returns the difference $(\mathrm{this} - \mathrm{other})$ of itself and the
    * given complex number.
+   *
+   * Formula: $(a + bi) - (c + di) = (a - c) + (b - d)i.$
    */
   sub(other: Complex | number) {
     if (!(other instanceof Complex)) {
@@ -69,14 +73,37 @@ export default class Complex {
   }
 
   /**
-   * Returns the difference $(\mathrm{this} - \mathrm{other})$ of itself and the
+   * Returns the product $(\mathrm{this} \cdot \mathrm{other})$ of itself and the
    * given complex number.
+   *
+   * Formula: $(a + bi)(c + di) = (ac - bd) + (ad + bc)i.$
    */
   mul(other: Complex | number) {
     if (!(other instanceof Complex)) {
-      return new Complex(this.real - other, this.imag);
+      return new Complex(this.real * other, this.imag * other);
     }
 
-    return new Complex(this.real - other.real, this.imag - other.imag);
+    return new Complex(
+      this.real * other.real - this.imag * other.imag,
+      this.real * other.imag + this.imag * other.real,
+    );
+  }
+
+  /**
+   * Returns the quotient $(\mathrm{this}/\mathrm{other})$ of itself and the
+   * given complex number.
+   *
+   * Formula: $\frac{a + bi}{c + di} = \frac{ac + bc}{c^2 + d^2} + \frac{bc - ad}{c^2 + d^2}i.$
+   */
+  div(other: Complex | number) {
+    if (!(other instanceof Complex)) {
+      return new Complex(this.real / other, this.imag / other);
+    }
+
+    const denominator = other.real ** 2 + other.imag ** 2;
+    return new Complex(
+      (this.real * other.real + this.imag * other.imag) / denominator,
+      (this.imag * other.real - this.real * other.imag) / denominator,
+    );
   }
 }

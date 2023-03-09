@@ -45,6 +45,27 @@ export default class Complex {
   }
 
   /**
+   * Creates a complex number in polar form.
+   */
+  fromPolar(abs: number = 0, arg: number = 0) {
+    return new Complex(abs * Math.cos(arg), abs * Math.sin(arg));
+  }
+
+  /**
+   * Returns the absolute value.
+   */
+  abs(): number {
+    return Math.sqrt(this.real ** 2 + this.imag ** 2);
+  }
+
+  /**
+   * Returns the complex argument.
+   */
+  arg(): number {
+    return Math.atan2(this.imag, this.real);
+  }
+
+  /**
    * Returns the sum of itself and the given complex number.
    *
    * Formula:
@@ -92,7 +113,7 @@ export default class Complex {
       this.real * other.imag + this.imag * other.real,
     );
 
-    // 
+    // return Complex.fromPolar(this.arg() * other.arg(), this.abs() + other.abs());
   }
 
   /**
@@ -116,5 +137,7 @@ export default class Complex {
       (this.real * other.real + this.imag * other.imag) / denominator,
       (this.imag * other.real - this.real * other.imag) / denominator,
     );
+
+    // return Complex.fromPolar(this.arg() / other.arg(), this.abs() - other.abs());
   }
 }

@@ -47,7 +47,7 @@ export default class Complex {
   /**
    * Creates a complex number in polar form.
    */
-  fromPolar(abs: number = 0, arg: number = 0) {
+  static fromPolar(abs: number = 0, arg: number = 0) {
     return new Complex(abs * Math.cos(arg), abs * Math.sin(arg));
   }
 

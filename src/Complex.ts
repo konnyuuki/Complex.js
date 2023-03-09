@@ -53,8 +53,8 @@ export default class Complex {
   }
 
   /**
-   * Returns the difference $(\operatorname{this} - \operatorname{other})$ of
-   * subtracting the given complex number from itself.
+   * Returns the difference $(\mathrm{this} - \mathrm{other})$ of subtracting
+   * the given complex number from itself.
    */
   sub(other: Complex) {
     return new Complex(this.real - other.real, this.imag - other.imag);

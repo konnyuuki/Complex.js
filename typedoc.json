@@ -1,0 +1,14 @@
+{
+  "entryPointStrategy": "expand",
+  "katex": {
+    "options": {
+      "delimiters": [
+        {
+          "left": "$",
+          "right": "$",
+          "display": false
+        }
+      ]
+    }
+  }
+}

@@ -48,7 +48,11 @@ export default class Complex {
    * Returns the sum $(\mathrm{this} + \mathrm{other})$ of itself and the given
    * complex number.
    */
-  add(other: Complex) {
+  add(other: Complex | number) {
+    if (!(other instanceof Complex)) {
+      return new Complex(this.real + other, this.imag);
+    }
+
     return new Complex(this.real + other.real, this.imag + other.imag);
   }
 
@@ -56,7 +60,23 @@ export default class Complex {
    * Returns the difference $(\mathrm{this} - \mathrm{other})$ of itself and the
    * given complex number.
    */
-  sub(other: Complex) {
+  sub(other: Complex | number) {
+    if (!(other instanceof Complex)) {
+      return new Complex(this.real - other, this.imag);
+    }
+
+    return new Complex(this.real - other.real, this.imag - other.imag);
+  }
+
+  /**
+   * Returns the difference $(\mathrm{this} - \mathrm{other})$ of itself and the
+   * given complex number.
+   */
+  mul(other: Complex | number) {
+    if (!(other instanceof Complex)) {
+      return new Complex(this.real - other, this.imag);
+    }
+
     return new Complex(this.real - other.real, this.imag - other.imag);
   }
 }

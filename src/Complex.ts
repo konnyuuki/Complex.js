@@ -2,7 +2,14 @@
  * A complex number.
  */
 export default class Complex {
+  /**
+   * Real part.
+   */
   real: number;
+
+  /**
+   * Imaginary part.
+   */
   imag: number;
 
   /**

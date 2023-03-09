@@ -47,7 +47,7 @@ export default class Complex {
   /**
    * Creates a complex number in polar form.
    */
-  static fromPolar(abs: number = 0, arg: number = 0) {
+  static fromPolar(abs: number = 0, arg: number = 0): Complex {
     return new Complex(abs * Math.cos(arg), abs * Math.sin(arg));
   }
 
@@ -71,7 +71,7 @@ export default class Complex {
    * Formula:
    * $$(a + bi) + (c + di) = (a + c) + (b + d)i.$$
    */
-  add(other: Complex | number) {
+  add(other: Complex | number): Complex {
     if (!(other instanceof Complex)) {
       return new Complex(this.real + other, this.imag);
     }
@@ -85,7 +85,7 @@ export default class Complex {
    * Formula:
    * $$(a + bi) - (c + di) = (a - c) + (b - d)i.$$
    */
-  sub(other: Complex | number) {
+  sub(other: Complex | number): Complex {
     if (!(other instanceof Complex)) {
       return new Complex(this.real - other, this.imag);
     }
@@ -103,7 +103,7 @@ export default class Complex {
    * $$r_1 e^{i \theta_1} r_2 e^{i \theta_2} = r_1 r_2 e^{i(\theta_1 +
    * \theta_2)}.$$
    */
-  mul(other: Complex | number) {
+  mul(other: Complex | number): Complex {
     if (!(other instanceof Complex)) {
       return new Complex(this.real * other, this.imag * other);
     }
@@ -129,7 +129,7 @@ export default class Complex {
    * $$\frac{r_1 e^{i \theta_1}}{r_2 e^{i \theta_2}} = \frac{r_1}{r_2}
    * e^{i(\theta_1 - \theta_2)}.$$
    */
-  div(other: Complex | number) {
+  div(other: Complex | number): Complex {
     if (!(other instanceof Complex)) {
       return new Complex(this.real / other, this.imag / other);
     }

@@ -19,4 +19,13 @@ export default class Complex {
     this.real = real;
     this.imag = imag;
   }
+
+  /**
+   * Adds two complex numbers.
+   * @param other Complex number to be added.
+   * @returns The sum of two complex numbers.
+   */
+  add(other: Complex) {
+    return new Complex(this.real + other.real, this.imag + other.imag);
+  }
 }

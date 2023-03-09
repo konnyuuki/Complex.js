@@ -46,7 +46,7 @@ export default class Complex {
 
   /**
    * Returns a new complex number that is the sum of itself and the given
-   * complex number (without changing itself).
+   * complex number $(this + other)$.
    */
   add(other: Complex) {
     return new Complex(this.real + other.real, this.imag + other.imag);
@@ -54,7 +54,7 @@ export default class Complex {
 
   /**
    * Returns a new complex number that is the difference of subtracting the
-   * given complex number from itself (without changing itself).
+   * given complex number from itself $(this - other)$.
    */
   sub(other: Complex) {
     return new Complex(this.real - other.real, this.imag - other.imag);

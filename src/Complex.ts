@@ -113,6 +113,8 @@ export default class Complex {
       this.real * other.imag + this.imag * other.real,
     );
 
+    // It can also be calculated in polar form:
+
     // return Complex.fromPolar(this.arg() * other.arg(), this.abs() + other.abs());
   }
 
@@ -137,6 +139,8 @@ export default class Complex {
       (this.real * other.real + this.imag * other.imag) / denominator,
       (this.imag * other.real - this.real * other.imag) / denominator,
     );
+
+    // It can also be calculated in polar form:
 
     // return Complex.fromPolar(this.arg() / other.arg(), this.abs() - other.abs());
   }

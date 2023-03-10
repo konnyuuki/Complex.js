@@ -70,7 +70,8 @@ export default class Complex {
   }
 
   /**
-   * Returns the sum of itself and the given complex number.
+   * Returns the sum $(\mathrm{this} + \mathrm{other})$ of itself and the given
+   * complex number.
    *
    * Formula:
    * $$(a + bi) + (c + di) = (a + c) + (b + d)i.$$
@@ -84,7 +85,8 @@ export default class Complex {
   }
 
   /**
-   * Returns the difference of itself and the given complex number.
+   * Returns the difference $(\mathrm{this} - \mathrm{other})$ of itself and the
+   * given complex number.
    *
    * Formula:
    * $$(a + bi) - (c + di) = (a - c) + (b - d)i.$$
@@ -98,7 +100,8 @@ export default class Complex {
   }
 
   /**
-   * Returns the product of itself and the given complex number.
+   * Returns the product $(\mathrm{this} \cdot \mathrm{other})$ of itself and
+   * the given complex number.
    *
    * Formula:
    * $$(a + bi)(c + di) = (ac - bd) + (ad + bc)i.$$
@@ -122,7 +125,8 @@ export default class Complex {
   }
 
   /**
-   * Returns the quotient of itself and the given complex number.
+   * Returns the quotient $\frac{\mathrm{this}}{\mathrm{other}}$ of itself and
+   * the given complex number.
    *
    * Formula:
    * $$\frac{a + bi}{c + di} = \frac{ac + bc}{c^2 + d^2} + \frac{bc - ad}{c^2 + d^2}i.$$

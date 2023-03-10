@@ -1,5 +1,6 @@
 {
   "entryPointStrategy": "expand",
+  "sort": ["source-order"],
   "katex": {
     "options": {
       "delimiters": [

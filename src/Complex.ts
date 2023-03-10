@@ -38,6 +38,8 @@ export default class Complex {
 
   /**
    * Creates a complex number in Cartesian form.
+   * @param real The real part.
+   * @param imag The imaginary part.
    */
   constructor(real: number = 0, imag: number = 0) {
     this.real = real;
@@ -46,6 +48,8 @@ export default class Complex {
 
   /**
    * Creates a complex number in polar form.
+   * @param abs The absolute value.
+   * @param arg The argument.
    */
   static fromPolar(abs: number = 0, arg: number = 0): Complex {
     return new Complex(abs * Math.cos(arg), abs * Math.sin(arg));
@@ -59,7 +63,7 @@ export default class Complex {
   }
 
   /**
-   * Returns the complex argument.
+   * Returns the argument.
    */
   arg(): number {
     return Math.atan2(this.imag, this.real);

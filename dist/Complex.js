@@ -78,7 +78,7 @@ var Complex = /** @class */ (function () {
         return Math.atan2(this.imag, this.real);
     };
     /**
-     * Returns the sum $(\mathrm{this} + \mathrm{other})$ of itself and the given
+     * Returns the sum $(\mathrm{this} + \mathrm{other})$ of this and the given
      * complex number.
      *
      * Formula:
@@ -91,7 +91,7 @@ var Complex = /** @class */ (function () {
         return new Complex(this.real + other.real, this.imag + other.imag);
     };
     /**
-     * Returns the difference $(\mathrm{this} - \mathrm{other})$ of itself and the
+     * Returns the difference $(\mathrm{this} - \mathrm{other})$ of this and the
      * given complex number.
      *
      * Formula:
@@ -104,8 +104,8 @@ var Complex = /** @class */ (function () {
         return new Complex(this.real - other.real, this.imag - other.imag);
     };
     /**
-     * Returns the product $(\mathrm{this} \cdot \mathrm{other})$ of itself and
-     * the given complex number.
+     * Returns the product $(\mathrm{this} \cdot \mathrm{other})$ of this and the
+     * given complex number.
      *
      * Formula:
      * $$(a + bi)(c + di) = (ac - bd) + (ad + bc)i.$$
@@ -122,8 +122,8 @@ var Complex = /** @class */ (function () {
         // return Complex.fromPolar(this.arg() * other.arg(), this.abs() + other.abs());
     };
     /**
-     * Returns the quotient $\frac{\mathrm{this}}{\mathrm{other}}$ of itself and
-     * the given complex number.
+     * Returns the quotient $\frac{\mathrm{this}}{\mathrm{other}}$ of this and the
+     * given complex number.
      *
      * Formula:
      * $$\frac{a + bi}{c + di} = \frac{ac + bc}{c^2 + d^2} + \frac{bc - ad}{c^2 + d^2}i.$$

@@ -104,8 +104,7 @@ export default class Complex {
    * $$(a + bi)(c + di) = (ac - bd) + (ad + bc)i.$$
    *
    * It can also be expressed in polar form:
-   * $$r_1 e^{i \theta_1} r_2 e^{i \theta_2} = r_1 r_2 e^{i(\theta_1 +
-   * \theta_2)}.$$
+   * $$r_1 e^{i \theta_1} r_2 e^{i \theta_2} = r_1 r_2 e^{i(\theta_1 + \theta_2)}.$$
    */
   mul(other: Complex | number): Complex {
     if (!(other instanceof Complex)) {
@@ -126,12 +125,10 @@ export default class Complex {
    * Returns the quotient of itself and the given complex number.
    *
    * Formula:
-   * $$\frac{a + bi}{c + di} = \frac{ac + bc}{c^2 + d^2} + \frac{bc -
-   * ad}{c^2 + d^2}i.$$
+   * $$\frac{a + bi}{c + di} = \frac{ac + bc}{c^2 + d^2} + \frac{bc - ad}{c^2 + d^2}i.$$
    *
    * It can also be expressed in polar form:
-   * $$\frac{r_1 e^{i \theta_1}}{r_2 e^{i \theta_2}} = \frac{r_1}{r_2}
-   * e^{i(\theta_1 - \theta_2)}.$$
+   * $$\frac{r_1 e^{i \theta_1}}{r_2 e^{i \theta_2}} = \frac{r_1}{r_2} e^{i(\theta_1 - \theta_2)}.$$
    */
   div(other: Complex | number): Complex {
     if (!(other instanceof Complex)) {

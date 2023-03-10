@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "terser-webpack-plugin": "^5.3.7",
     "ts-loader": "^9.4.2",
     "ts-node": "^10.9.1",
     "typedoc": "^0.23.26",
